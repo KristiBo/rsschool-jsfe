@@ -1,0 +1,23 @@
+@font-face {
+  font-family: Arial;
+  src:
+    local("Arial"),
+    url("../assets/fonts/Arial.woff2") format("woff2"),
+    url("../assets/fonts/Arial.woff") format("woff"),
+    url("../assets/fonts/Arial.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Georgia;
+  src:
+    local("Georgia"),
+    url("../assets/fonts/Georgia.woff2") format("woff2"),
+    url("../assets/fonts/Georgia.woff") format("woff"),
+    url("../assets/fonts/Georgia.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
