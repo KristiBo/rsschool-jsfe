@@ -1,0 +1,20 @@
+@import url(../../sass/normalize.css);
+@import url(../../sass/_fonts.scss);
+@import url(../../sass/_colors.scss);
+@import url(../../sass/_buttons.scss);
+@import url(../../sass/_footer.scss);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*# sourceMappingURL=main.css.map */
