@@ -1,20 +1,47 @@
 @import url(../../sass/normalize.css);
-@import url(../../sass/_fonts.scss);
-@import url(../../sass/_colors.scss);
-@import url(../../sass/_buttons.scss);
-@import url(../../sass/_footer.scss);
+@import "../../sass/_basic.scss";
+@import "../../sass/_colors.scss";
+@import "../../sass/_fonts.scss";
+@import "../../sass/_buttons.scss";
+@import "../../sass/_header.scss";
+@import "../../sass/_footer.scss";
 
-
-* {
-  box-sizing: border-box;
+.container {
+  max-width: 1200px;
+  margin: 80px auto 100px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+.hero {
+  &__section {
+    background: url(../../assets/images/noise_lines_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+    padding-top: 180px;
+  }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 163px;
+    gap: 42px;
+    max-width: 460px;
+
+    .button {
+      width: 207px;
+      height: 52px;
+    }
+  }
+
+  &__text {
+    @include paragraph-l;
+  }
+
+  &__image {
+    width: 698px;
+    height: 728px;
+  }
 }

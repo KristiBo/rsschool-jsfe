@@ -1,0 +1,27 @@
+.button {
+  border: none;
+  border-radius: 100px;
+  font-family: "Georgia", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: $color-dark-3xl;
+  background-color: transparent;  
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: $color-primary-light;
+  }
+}
+
+.button_colored {
+  background-color: $color-primary;
+}
+
+.button_transparent {
+  border: 2px solid $color-primary;
+}

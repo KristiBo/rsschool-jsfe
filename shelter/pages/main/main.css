@@ -1,8 +1,4 @@
 @import url(../../sass/normalize.css);
-@import url(../../sass/_fonts.scss);
-@import url(../../sass/_colors.scss);
-@import url(../../sass/_buttons.scss);
-@import url(../../sass/_footer.scss);
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,9 +8,255 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Arial;
+  src: local("Arial"), url("../assets/fonts/Arial.woff2") format("woff2"), url("../assets/fonts/Arial.woff") format("woff"), url("../assets/fonts/Arial.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Georgia;
+  src: local("Georgia"), url("../assets/fonts/Georgia.woff2") format("woff2"), url("../assets/fonts/Georgia.woff") format("woff"), url("../assets/fonts/Georgia.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  color: #FFFFFF;
+}
+
+h3 {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+h4 {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+h5 {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+.button {
+  border: none;
+  border-radius: 100px;
+  font-family: "Georgia", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #292929;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.button:hover {
+  background-color: #FDDCC4;
+}
+
+.button_colored {
+  background-color: #F1CDB3;
+}
+
+.button_transparent {
+  border: 2px solid #F1CDB3;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 61px;
+}
+
+.logo__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.logo__subtitle {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 36px;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #CDCDCD;
+}
+
+.nav__item_active {
+  border-bottom: 3px solid #F1CDB3;
+  color: #FAFAFA;
+}
+
+.nav__item_active .nav__link {
+  cursor: default;
+}
+
+.nav__item_disabled:hover {
+  color: #FAFAFA;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 80px auto 100px;
+}
+
+.hero__section {
+  background: url(../../assets/images/noise_lines_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  padding-top: 180px;
+}
+
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+
+.hero__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 163px;
+  gap: 42px;
+  max-width: 460px;
+}
+
+.hero__description .button {
+  width: 207px;
+  height: 52px;
+}
+
+.hero__text {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #CDCDCD;
+}
+
+.hero__image {
+  width: 698px;
+  height: 728px;
 }
 /*# sourceMappingURL=main.css.map */
