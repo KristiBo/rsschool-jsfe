@@ -96,6 +96,9 @@
     gap: 60px;
 
     .button_colored {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 261px;
       height: 52px;
     }
@@ -154,6 +157,97 @@
   &__name {
     line-height: 23px;
     color: $color-dark-l;
+  }  
+}
+
+.help {
+  &__section {
+    background-color: $color-light-xl;
   }
-  
+
+  &__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    color: $color-dark-l;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 55px 120px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 29px;
+  }
+  &__icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.donation {
+		&__section {
+      background-color: $color-light-l;
+		}
+
+		&__container {
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+		}
+
+		&__image {
+      width: 505px;
+      height: 261px;
+		}
+
+		&__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      max-width: 380px;
+		}
+
+		&__title {
+      color: $color-dark-l;
+		}
+
+		&__subtitle {
+      color: $color-dark-l;
+		}
+
+		&__card {
+      display: flex;
+      justify-content: center;
+      padding: 10px 15px;
+      gap: 15px;
+      border-radius: 9px;
+      font-family: "Georgia", serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 115%;
+      letter-spacing: 0.06em;
+      color: $color-dark-l;      
+		}
+
+    &__info {
+      @include paragraph-s;
+      color: $color-dark-m;
+    }
 }

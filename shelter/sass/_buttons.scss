@@ -9,35 +9,35 @@
   letter-spacing: 0.06em;
   text-align: center;
   color: $color-dark-3xl;
-  background-color: transparent;  
+  background-color: transparent;
   cursor: pointer;
   transition: 0.5s;
 
   &:hover {
     background-color: $color-primary-light;
   }
-}
 
-.button_colored {
-  background-color: $color-primary;
-}
+  &_colored {
+    background-color: $color-primary;
+  }
 
-.button_transparent {
-  border: 2px solid $color-primary;
+  &_transparent {
+    border: 2px solid $color-primary;
 
-  &:hover {
-    border: 2px solid $color-primary-light;
-}
-}
+    &:hover {
+      border: 2px solid $color-primary-light;
+    }
+  }
 
-.button_prev {
-  width: 52px;
-  height: 52px;
-  background: url(../../assets/icons/arrow-left.svg) center no-repeat;
-}
+  &_prev {
+    width: 52px;
+    height: 52px;
+    background: url(../../assets/icons/arrow-left.svg) center no-repeat;
+  }
 
-.button_next {
-  width: 52px;
-  height: 52px;
-  background: url(../../assets/icons/arrow-right.svg) center no-repeat;
+  &_next {
+    width: 52px;
+    height: 52px;
+    background: url(../../assets/icons/arrow-right.svg) center no-repeat;
+  }
 }

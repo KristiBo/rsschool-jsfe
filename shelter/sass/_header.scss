@@ -9,6 +9,8 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 60px 40px 0;
+    overflow-x: hidden;
+    width: 100vw;
   }
 }
 
@@ -19,6 +21,14 @@
     align-items: center;
     flex-direction: column;
     gap: 10px;
+
+    &:hover {
+      .logo__title,
+      .logo__subtitle {
+        color: $color-light-s;
+        transition: 0.5s;
+      }
+    } 
   }
 
   &__subtitle {
