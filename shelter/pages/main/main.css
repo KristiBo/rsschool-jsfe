@@ -53,7 +53,7 @@ p {
 h1 {
   margin: 0;
   padding: 0;
-  font-family: inherit;
+  font-family: "Georgia", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -65,7 +65,7 @@ h1 {
 h2 {
   margin: 0;
   padding: 0;
-  font-family: inherit;
+  font-family: "Georgia", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 44px;
@@ -74,7 +74,9 @@ h2 {
 }
 
 h3 {
-  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 35px;
@@ -83,7 +85,9 @@ h3 {
 }
 
 h4 {
-  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -92,7 +96,9 @@ h4 {
 }
 
 h5 {
-  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -129,6 +135,22 @@ h5 {
   border: 2px solid #F1CDB3;
 }
 
+.button_transparent:hover {
+  border: 2px solid #FDDCC4;
+}
+
+.button_prev {
+  width: 52px;
+  height: 52px;
+  background: url(../../assets/icons/arrow-left.svg) center no-repeat;
+}
+
+.button_next {
+  width: 52px;
+  height: 52px;
+  background: url(../../assets/icons/arrow-right.svg) center no-repeat;
+}
+
 .header {
   width: 100%;
   position: absolute;
@@ -144,9 +166,9 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding-top: 61px;
+  padding: 60px 40px 0;
 }
 
 .logo__link {
@@ -171,7 +193,7 @@ h5 {
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
-  line-height: 100%;
+  line-height: 15px;
   letter-spacing: 0.1em;
   color: #FFFFFF;
 }
@@ -208,9 +230,23 @@ h5 {
   color: #FAFAFA;
 }
 
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
 .container {
-  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1280px;
   margin: 80px auto 100px;
+  padding: 0 40px;
 }
 
 .hero__section {
@@ -219,13 +255,11 @@ h5 {
 }
 
 .hero__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto;
+  gap: 42px;
 }
 
 .hero__description {
@@ -258,5 +292,145 @@ h5 {
 .hero__image {
   width: 698px;
   height: 728px;
+}
+
+.about__container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 120px;
+}
+
+.about__image {
+  width: 300px;
+  height: 408px;
+}
+
+.about__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+  max-width: 430px;
+}
+
+.about__title {
+  color: #545454;
+}
+
+.about__text {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #4C4C4C;
+}
+
+.pets__section {
+  background-color: #F6F6F6;
+}
+
+.pets__container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 60px;
+}
+
+.pets__container .button_colored {
+  width: 261px;
+  height: 52px;
+}
+
+.pets__title {
+  color: #545454;
+  text-align: center;
+}
+
+.pets__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pets__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 53px;
+  gap: 90px;
+}
+
+.pets__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.pets__card .button_transparent {
+  margin-bottom: 30px;
+  width: 187px;
+  height: 52px;
+}
+
+.pets__card:hover {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.pets__card:hover .button_transparent {
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+}
+
+.pets__image {
+  width: 270px;
+  height: 270px;
+}
+
+.pets__name {
+  line-height: 23px;
+  color: #545454;
 }
 /*# sourceMappingURL=main.css.map */

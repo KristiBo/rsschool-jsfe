@@ -6,9 +6,17 @@
 @import "../../sass/_header.scss";
 @import "../../sass/_footer.scss";
 
+.section {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
 .container {
-  max-width: 1200px;
+  display: flex;
+  max-width: 1280px;
   margin: 80px auto 100px;
+  padding: 0 40px;
 }
 
 .hero {
@@ -18,9 +26,9 @@
   }
 
   &__container {
-    display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    gap: 42px;
   }
 
   &__description {
@@ -38,10 +46,114 @@
 
   &__text {
     @include paragraph-l;
+    color: $color-dark-s;
   }
 
   &__image {
     width: 698px;
     height: 728px;
   }
+}
+
+.about {  
+  &__container {
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+  }
+
+  &__image {
+    width: 300px;
+    height: 408px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 430px;
+  }
+
+  &__title {
+    color: $color-dark-l;
+  }
+
+  &__text {
+    @include paragraph-l;
+    color: $color-dark-xl;
+  }
+}
+
+.pets {
+  &__section {
+    background-color: $color-light-l;
+  }
+
+  &__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+    .button_colored {
+      width: 261px;
+      height: 52px;
+    }
+  }
+
+  &__title {
+    color: $color-dark-l;
+    text-align: center;
+  }
+
+  &__slider {
+    display: flex;
+    align-items: center;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 53px;
+    gap: 90px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: $color-light-s;
+    border-radius: 9px;
+    overflow: hidden;
+    transition: 0.5s;
+
+    .button_transparent {
+      margin-bottom: 30px;
+      width: 187px;
+      height: 52px;      
+    }
+
+    &:hover {
+      background-color: $color-light-xl;
+      box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+      .button_transparent {
+        background-color: $color-primary-light;
+        border: 2px solid $color-primary-light;
+      }
+    }
+  }
+
+  &__image {
+    width: 270px;
+    height: 270px;
+  }
+
+  &__name {
+    line-height: 23px;
+    color: $color-dark-l;
+  }
+  
 }

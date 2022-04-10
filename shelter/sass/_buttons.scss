@@ -24,4 +24,20 @@
 
 .button_transparent {
   border: 2px solid $color-primary;
+
+  &:hover {
+    border: 2px solid $color-primary-light;
+}
+}
+
+.button_prev {
+  width: 52px;
+  height: 52px;
+  background: url(../../assets/icons/arrow-left.svg) center no-repeat;
+}
+
+.button_next {
+  width: 52px;
+  height: 52px;
+  background: url(../../assets/icons/arrow-right.svg) center no-repeat;
 }

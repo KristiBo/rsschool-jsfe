@@ -6,9 +6,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding-top: 61px;
+    padding: 60px 40px 0;
   }
 }
 
@@ -26,7 +26,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
-    line-height: 100%;
+    line-height: 15px;
     letter-spacing: 0.1em;
     color: $color-light-xl;
   }
@@ -39,6 +39,7 @@
     align-items: center;
     gap: 36px;
     @include paragraph-l;
+    color: $color-dark-s;
   }
 
   &__item_active {
