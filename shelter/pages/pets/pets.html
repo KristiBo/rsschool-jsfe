@@ -10,26 +10,26 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__container">
+    <header class="header header_pets">
+      <div class="header__container header__container_pets">
         <div class="logo">
           <a href="../main/main.html" class="logo__link">
-            <h1 class="logo__title">Cozy House</h1>
-            <span class="logo__subtitle">Shelter for pets in Boston</span>
+            <h1 class="logo__title logo__title_pets">Cozy House</h1>
+            <span class="logo__subtitle logo__subtitle_pets">Shelter for pets in Boston</span>
           </a>
         </div>
         <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item nav__item_disabled">
+          <ul class="nav__list nav__list_pets">
+            <li class="nav__item nav__item_disabled nav__item_disabled-pets">
               <a href="../main/main.html" class="nav__link">About the shelter</a>
             </li>
-            <li class="nav__item nav__item_active">
+            <li class="nav__item nav__item_active nav__item_pets">
               <a href="pets" class="nav__link">Our pets</a>
             </li>
-            <li class="nav__item nav__item_disabled">
+            <li class="nav__item nav__item_disabled nav__item_disabled-pets">
               <a href="../main/main.html#help" class="nav__link nav__link">Help the shelter</a>
             </li>
-            <li class="nav__item nav__item_disabled">
+            <li class="nav__item nav__item_disabled nav__item_disabled-pets">
               <a href="#contacts" class="nav__link">Contacts</a>
             </li>
           </ul>
@@ -42,8 +42,7 @@
         <div class="container pets__container">
           <h3 class="pets__title">Our friends who<br>
             are looking for a house</h3>
-          <div class="pets__slider">
-            <button class="button button_transparent button_prev"></button>
+          <div class="pets__slider">            
             <div class="pets__cards">
               <div class="pets__card">
                 <img src="../../assets/images/pets-katrine.jpg" alt="Katrine" class="pets__image">
@@ -60,10 +59,40 @@
                 <h4 class="pets__name">Woody</h4>
                 <button class="button button_transparent">Learn more</button>
               </div>
-            </div>
-            <button class="button button_transparent button_next"></button>
+              <div class="pets__card">
+                <img src="../../assets/images/pets-sophia.jpg" alt="Sophia" class="pets__image">
+                <h4 class="pets__name">Sophia</h4>
+                <button class="button button_transparent">Learn more</button>
+              </div>
+              <div class="pets__card">
+                <img src="../../assets/images/pets-timmy.jpg" alt="Timmy" class="pets__image">
+                <h4 class="pets__name">Timmy</h4>
+                <button class="button button_transparent">Learn more</button>
+              </div>
+              <div class="pets__card">
+                <img src="../../assets/images/pets-charly.jpg" alt="Charly" class="pets__image">
+                <h4 class="pets__name">Charly</h4>
+                <button class="button button_transparent">Learn more</button>
+              </div>
+              <div class="pets__card">
+                <img src="../../assets/images/pets-scarlet.jpg" alt="Scarlett" class="pets__image">
+                <h4 class="pets__name">Scarlett</h4>
+                <button class="button button_transparent">Learn more</button>
+              </div>
+              <div class="pets__card">
+                <img src="../../assets/images/pets-freddie.jpg" alt="Freddie" class="pets__image">
+                <h4 class="pets__name">Freddie</h4>
+                <button class="button button_transparent">Learn more</button>
+              </div>
+            </div>            
           </div>
-          <button class="button button_colored">Get to know the rest</button>
+          <div class="slider__buttons">
+            <button disabled class="button button_transparent button_start">&lt;&lt;</button>
+            <button disabled class="button button_transparent button_back">&lt;</button>
+            <button class="button_colored button_number">1</button>
+            <button class="button button_transparent button_forward">&gt;</button>
+            <button class="button button_transparent button_end">&gt;&gt;</button>
+          </div>
         </div>
       </section>
       </main>

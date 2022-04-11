@@ -40,4 +40,35 @@
     height: 52px;
     background: url(../../assets/icons/arrow-right.svg) center no-repeat;
   }
+
+  &_start,
+  &_back,  
+  &_forward,
+  &_end {
+    width: 52px;
+    height: 52px;
+  }
+
+  &_number {
+    width: 52px;
+    height: 52px;    
+    font-family: "Georgia", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: $color-dark-3xl;
+    background-color: $color-primary;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    cursor: default;
+  }
+}
+
+.button_transparent:disabled {
+  color: $color-dark-s;
+  border-color: $color-dark-s;
+  pointer-events: none;
 }

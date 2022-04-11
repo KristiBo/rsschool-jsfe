@@ -6,3 +6,86 @@
 @import "../../sass/_header.scss";
 @import "../../sass/_footer.scss";
 
+.pets {
+  &__section {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    background-color: $color-light-l;
+  }
+
+  &__container {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    max-width: 1280px;
+    margin: 200px auto 100px;
+    padding: 0 40px;    
+  }
+
+  &__title {
+    color: $color-dark-l;
+    text-align: center;
+  }
+
+  &__slider {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px 40px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: $color-light-s;
+    border-radius: 9px;
+    overflow: hidden;
+    transition: 0.5s;
+
+    .button_transparent {
+      margin-bottom: 30px;
+      width: 187px;
+      height: 52px;      
+    }
+
+    &:hover {
+      background-color: $color-light-xl;
+      box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+      cursor: pointer;
+      .button_transparent {
+        background-color: $color-primary-light;
+        border: 2px solid $color-primary-light;
+      }
+    }
+  }
+
+  &__image {
+    width: 270px;
+    height: 270px;
+  }
+
+  &__name {
+    line-height: 23px;
+    color: $color-dark-l;
+  }  
+}
+
+.slider__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
