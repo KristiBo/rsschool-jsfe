@@ -24,7 +24,10 @@
   @media (max-width: $tablet-width) {
     &__container {
     padding: 30px 30px 0;
-    }
+      &_pets {
+        padding-bottom: 31px;
+      }
+    }    
   }
 }
 
@@ -104,6 +107,12 @@
 
   &__item_disabled-pets:hover {
     color: $color-dark-3xl;
+  }
+
+  @media (max-width: $tablet-width) {
+    &__list_pets {
+      padding-bottom: 2px;
+    }
   }
 }
 
