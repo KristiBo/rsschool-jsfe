@@ -12,16 +12,16 @@
   &__column_first {
     display: flex;
     flex-direction: column;
-    gap: 43px;
     margin-top: 16px;
+    gap: 43px;    
   }
 
   &__column_second {
     display: flex;
-    flex-direction: column;
-    gap: 33px;
+    flex-direction: column;    
     margin-top: 16px;
     margin-right: 5px;
+    gap: 33px;
   }
 
   &__title {
@@ -67,5 +67,26 @@
     &__column_second {
       margin-top: 0;
     }
+  }
+
+  @media (max-width: $mobile-width) {
+    &__container {
+      padding: 30px 10px 0;
+      gap: 40px;
+    }
+
+    &__column_first {
+      align-items: center;
+      gap: 45px;
+    }
+
+    &__column_second {
+      margin: 0;
+      gap: 40px;
+    }
+
+    &__image {
+      max-width: 260px;
+   }
   }
 }

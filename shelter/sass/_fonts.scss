@@ -43,6 +43,13 @@ h2 {
   font-size: 44px;
   line-height: 57px;
   color: $color-light-xl;
+
+  @media (max-width: $mobile-width) {
+    font-size: 25px;
+    line-height: 32.5px;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
 }
 
 h3 {
@@ -54,6 +61,12 @@ h3 {
   font-size: 35px;
   line-height: 45.5px;
   letter-spacing: 0.06em;
+
+  @media (max-width: $mobile-width) {
+    font-size: 25px;
+    line-height: 32.5px;
+    text-align: center;
+  }
 }
 
 h4 {
