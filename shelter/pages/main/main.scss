@@ -155,8 +155,17 @@
   }
 
   @media (max-width: $mobile-width) {
+    &__container {
+      gap: 40px;
+    }
+
     &__description {
       margin: 0 15px;
+      gap: 22px;
+    }
+  
+    &__title {
+      margin-bottom: 3px;
     }
 
     &__text {
@@ -257,23 +266,29 @@
   }
 
   @media (max-width: $mobile-width) {
-    &__slider {
-      flex-direction: column-reverse;
+    &__container {
+      gap: 42px;
+    }
 
-      .button_prev,
+    &__slider {
+      flex: 1 1 50%;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 270px;
+      gap: 20px 80px;
+
+      .button_prev {
+        order: 2;
+      }
+
       .button_next {
-        display: flex;
-        flex-direction: row;
+        order: 3;
       }
     }
 
     &__cards {      
       gap: 0;
       margin: 0;
-    }
-
-    &__cards:nth-child(2) {
-      order: 1;
     }
 
     &__card:not(:first-child) {
@@ -334,6 +349,10 @@
   }
 
   @media (max-width: $mobile-width) {
+    &__title {
+      margin-bottom: 40px;
+    }
+
     &__list {
       max-width: 290px;
       gap: 30px;
@@ -432,8 +451,13 @@
       padding-bottom: 42px;
     }
 
+    &__container {
+      gap: 0;
+    }
+
     &__text {
       align-items: center;
+      margin-bottom: 42px;
     }
 
     &__card {
@@ -442,6 +466,7 @@
     }
     
     &__info {
+      max-width: 280px;
       text-align: justify;
     }
 

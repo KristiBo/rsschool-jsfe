@@ -138,6 +138,13 @@ h5 {
   letter-spacing: 0.06em;
 }
 
+@media (max-width: 767px) {
+  h5 {
+    line-height: 24px;
+    letter-spacing: normal;
+  }
+}
+
 .button {
   border: none;
   border-radius: 100px;
@@ -318,6 +325,7 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 2px;
   gap: 36px;
   font-family: "Arial", sans-serif;
   font-style: normal;
@@ -352,18 +360,9 @@ h5 {
   color: #292929;
 }
 
-@media (max-width: 1279px) {
-  .nav__list_pets {
-    padding-bottom: 2px;
-  }
-}
-
 @media (max-width: 767px) {
   .nav {
     position: fixed;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     margin: 0;
     top: 0;
     right: -100%;
@@ -390,6 +389,7 @@ h5 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-top: 248px;
   }
   .nav__link {
     font-size: 32px;
@@ -437,7 +437,7 @@ h5 {
 }
 
 .burger_pets span, .burger_pets::before, .burger_pets::after {
-  background-color: #292929;
+  background-color: #000;
 }
 
 @media (max-width: 767px) {
@@ -448,21 +448,6 @@ h5 {
     width: 30px;
     height: 22px;
     cursor: pointer;
-    /*&.open span {
-      transform: rotate(90deg);
-    }
-  
-    &.open::before {
-      left: 40%;
-      top: 50%;
-      transform: rotate(90deg);
-    }
-  
-    &.open::after {
-      left: -40%;
-      bottom: 50%;
-      transform: rotate(90deg) translate(10%);
-    }*/
   }
 }
 

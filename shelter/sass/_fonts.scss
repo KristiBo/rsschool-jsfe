@@ -89,6 +89,12 @@ h5 {
   font-size: 15px;
   line-height: 17px;
   letter-spacing: 0.06em;
+
+  @media (max-width: $mobile-width) {
+    line-height: 24px;
+    letter-spacing: normal;
+  }
+
 }
 
 @mixin paragraph-l {

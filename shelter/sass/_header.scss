@@ -88,9 +88,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 2px;
     gap: 36px;
     @include paragraph-l;
-    color: $color-dark-s;
+    color: $color-dark-s;    
 
     &_pets {
       color: $color-dark-l;
@@ -119,18 +120,11 @@
   &__item_disabled-pets:hover {
     color: $color-dark-3xl;
   }
-
-  @media (max-width: $tablet-width) {
-    &__list_pets {
-      padding-bottom: 2px;
-    }
-  }
 }
 
 @media (max-width: $mobile-width) {
   .nav {
     position: fixed;
-    justify-content: center;
     margin: 0;
     top: 0;
     right: -100%;
@@ -149,6 +143,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding-top: 248px;
     }
   
     &__link {
@@ -199,7 +194,7 @@
     span,
     &::before,
     &::after {
-    background-color: $color-dark-3xl;
+    background-color: #000;
     }
   }
 
@@ -211,20 +206,20 @@
     height: 22px;
     cursor: pointer;    
 
-    /*&.open span {
-      transform: rotate(90deg);
-    }
+    //&.open span {
+    //  transform: rotate(90deg);
+    //}
   
-    &.open::before {
-      left: 40%;
-      top: 50%;
-      transform: rotate(90deg);
-    }
+    //&.open::before {
+    //  left: 40%;
+    //  top: 50%;
+    //  transform: rotate(90deg);
+    //}
   
-    &.open::after {
-      left: -40%;
-      bottom: 50%;
-      transform: rotate(90deg) translate(10%);
-    }*/
+    //&.open::after {
+    //  left: -40%;
+    //  bottom: 50%;
+    //  transform: rotate(90deg) translate(10%);
+    //}
   }  
 }
