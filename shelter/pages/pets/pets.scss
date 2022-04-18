@@ -1,6 +1,6 @@
 @import url(../../sass/normalize.css);
 @import "../../sass/_basic.scss";
-@import "../../sass/_colors.scss";
+@import "../../sass/_constants.scss";
 @import "../../sass/_fonts.scss";
 @import "../../sass/_buttons.scss";
 @import "../../sass/_header.scss";
@@ -41,7 +41,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 30px 40px;
+    gap: 29px 40px;
   }
 
   &__card {
@@ -73,14 +73,61 @@
   }
 
   &__image {
-    width: 270px;
-    height: 270px;
+    max-width: 270px;
+
+    img {
+      max-width: 100%;
+    }
   }
 
   &__name {
     line-height: 23px;
     color: $color-dark-l;
-  }  
+  }
+
+  @media (max-width: $tablet-width) {
+    &__container {      
+      margin-bottom: 77px;
+      padding: 0 30px;
+      gap: 29px;
+    }
+
+    &__slider {
+      padding: 0;
+      margin-bottom: 10px;
+    }
+
+    &__cards {
+      max-width: 580px;
+    }
+
+    &__card:nth-child(n+7) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &__container {
+      margin-top: 161px; 
+      margin-bottom: 42px;
+      padding: 0 10px;
+      gap: 42px;
+    }
+
+    &__slider {
+      margin-bottom: 0;
+    }
+
+    &__cards {
+      row-gap: 30px;
+      max-width: 270px;
+    }
+
+    &__card:nth-child(n+4) {
+      display: none;
+    }
+  }
+
 }
 
 .slider__buttons {
@@ -88,4 +135,8 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+
+  @media (max-width: $mobile-width) {
+    gap: 10px;
+  }
 }
