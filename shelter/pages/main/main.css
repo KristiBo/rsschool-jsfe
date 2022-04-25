@@ -49,6 +49,24 @@ p {
   padding: 0;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background: rgba(41, 41, 41, 0.6);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  z-index: 1;
+}
+
 @font-face {
   font-family: Arial;
   src: local("Arial"), url("../assets/fonts/Arial.woff2") format("woff2"), url("../assets/fonts/Arial.woff") format("woff"), url("../assets/fonts/Arial.ttf") format("ttf");
@@ -266,6 +284,18 @@ h5 {
   }
 }
 
+.logo {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.logo__burger {
+  margin-left: calc(100vw - 320px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 10;
+}
+
 .logo__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -362,7 +392,16 @@ h5 {
 
 @media (max-width: 767px) {
   .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     position: fixed;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 0;
     top: 0;
     right: -100%;
@@ -375,21 +414,20 @@ h5 {
     transition: 0.5s;
     overflow: auto;
   }
+  .nav_pets {
+    background-color: #FFFFFF;
+  }
   .nav.open {
     right: 0;
+    z-index: 2;
   }
   .nav__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-top: 248px;
+    padding-top: 110px;
+    gap: 40px;
   }
   .nav__link {
     font-size: 32px;
@@ -399,6 +437,9 @@ h5 {
 
 .burger {
   display: none;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -413,7 +454,7 @@ h5 {
 .burger span, .burger::before, .burger::after {
   left: 0;
   position: absolute;
-  height: 10%;
+  height: 2px;
   width: 100%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -433,7 +474,7 @@ h5 {
 }
 
 .burger span {
-  top: 50%;
+  top: calc(50% - 1px);
 }
 
 .burger_pets span, .burger_pets::before, .burger_pets::after {
@@ -445,9 +486,6 @@ h5 {
     display: block;
     position: relative;
     z-index: 10;
-    width: 30px;
-    height: 22px;
-    cursor: pointer;
   }
 }
 
