@@ -142,8 +142,7 @@
     width: 320px;
     height: 100%;
     background-color: $color-dark-3xl;
-    animation-name: slidein;
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
     overflow: auto;
 
     &_pets {
@@ -152,7 +151,7 @@
   
     &.open {
       right: 0;
-      z-index: 2;
+      z-index: 5;
     }
   
     &__list {

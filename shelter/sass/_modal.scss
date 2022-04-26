@@ -1,0 +1,160 @@
+.overlay,
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  background: rgba(41, 41, 41, 0.6);
+  transition: all 1s ease;
+}
+
+.overlay.active,
+.modal.open {  
+  z-index: 3;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__window {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+  &__content {
+    position: relative;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;    
+    background-color: $color-light-s;
+    border-radius: 9px;
+
+    &:hover {
+      cursor: default;
+    }
+
+    @media (max-width: $tablet-width){
+      max-width: 630px;
+    }
+
+    @media (max-width: $mobile-width){
+      max-width: 245px;
+    }
+  }
+
+  &__image {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    border-radius: 9px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: $tablet-width){
+      width: 350px;
+      height: 350px;
+    }
+
+    @media (max-width: $mobile-width){
+      display: none;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 20px 88px 29px;
+    max-width: 351px;
+    color: #000;
+
+    @media (max-width: $tablet-width){
+      padding: 10px;
+      max-width: 260px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    @media (max-width: $mobile-width){
+      text-align: center;
+    }
+  }
+
+  &__description {
+    margin: 40px 0;
+    font-family: "Georgia", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+
+    @media (max-width: $tablet-width){
+      margin: 20px 0;
+      font-size: 13px;
+      line-height: 14px;
+    }
+
+    @media (max-width: $mobile-width){
+      text-align: justify;
+    }
+  }
+
+  &__list {
+    font-family: "Georgia", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+  }
+
+  &__item::before {
+    margin-right: 10px;
+    content: "•";
+    color: $color-primary;
+  }
+
+  .button_close {
+    position: absolute;
+    top: -50px;
+    right: -45px;
+
+    &.hover{
+      background-color: $color-primary-light;
+      border: 2px solid $color-primary-light;
+    }
+
+    @media (max-width: $mobile-width) {
+      right: -31px;
+    }
+  }
+}
+
+.modal.open .modal__window {
+  opacity: 1;
+}
