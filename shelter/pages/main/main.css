@@ -718,7 +718,7 @@ h5 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 50px 20px 88px 29px;
+  padding: 0 20px 0 29px;
   max-width: 351px;
   color: #000;
 }
@@ -771,6 +771,16 @@ h5 {
   font-size: 15px;
   line-height: 17px;
   letter-spacing: 0.06em;
+}
+
+.modal__item {
+  padding-bottom: 10px;
+}
+
+@media (max-width: 1279px) {
+  .modal__item {
+    padding-bottom: 6px;
+  }
 }
 
 .modal__item::before {
