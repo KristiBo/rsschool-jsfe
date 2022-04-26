@@ -29,29 +29,27 @@
     }
   }
 
-  &_prev {
+  &_prev,
+  &_next,
+  &_start,
+  &_back,  
+  &_forward,
+  &_end,
+  &_number,
+  &_close {
     width: 52px;
     height: 52px;
+  }
+
+  &_prev {
     background: url(../../assets/icons/arrow-left.svg) center no-repeat;
   }
 
   &_next {
-    width: 52px;
-    height: 52px;
     background: url(../../assets/icons/arrow-right.svg) center no-repeat;
-  }
+  } 
 
-  &_start,
-  &_back,  
-  &_forward,
-  &_end {
-    width: 52px;
-    height: 52px;
-  }
-
-  &_number {
-    width: 52px;
-    height: 52px;    
+  &_number {   
     font-family: "Georgia", serif;
     font-style: normal;
     font-weight: 400;
@@ -64,6 +62,10 @@
     border: 2px solid $color-primary;
     border-radius: 100px;
     cursor: default;
+  }
+
+  &_close {
+    background: url(../../assets/icons/close.svg) center no-repeat;
   }
 }
 
