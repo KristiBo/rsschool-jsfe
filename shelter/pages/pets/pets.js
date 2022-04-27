@@ -43,9 +43,9 @@ const toModal = pet => `
           <p class="modal__description">${pet.description}</p>
           <ul class="modal__list">
             <li class="modal__item"><b>Age:</b> ${pet.age}</li>
-            <li class="modal__item"><b>Inoculations:</b> ${pet.inoculations}</li>
-            <li class="modal__item"><b>Diseases:</b> ${pet.diseases}</li>
-            <li class="modal__item"><b>Parasites:</b> ${pet.parasites}</li>
+            <li class="modal__item"><b>Inoculations:</b> ${pet.inoculations.join(', ')}</li>
+            <li class="modal__item"><b>Diseases:</b> ${pet.diseases.join(', ')}</li>
+            <li class="modal__item"><b>Parasites:</b> ${pet.parasites.join(', ')}</li>
           </ul>
         </div>
         <button class="button button_transparent button_close"></button>
