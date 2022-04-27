@@ -1,5 +1,5 @@
 console.log(`Добрый день.
-Если у Вас будет такая возможность, то прошу перепроверить мою работу в четверг.
+Если у Вас будет такая возможность, то прошу перепроверить мою работу в четверг (дорабатываю рандом слайдера).
 Хорошего дня!`);
 
 const petsImport = await fetch('../../assets/pets.json');
@@ -9,9 +9,16 @@ const iconBurger = document.querySelector('.burger');
 const menuBurger = document.querySelector('.nav');
 const menuLinks = document.querySelectorAll('.nav__link');
 const overlay = document.querySelector('.overlay');
-const cards = document.querySelectorAll('.pets__cards');
 const modal = document.querySelector('.modal');
 const modalContent = document.querySelector('.modal__content');
+const btnPrev = document.querySelector('.button_prev');
+const btnNext = document.querySelector('.button_next');
+const carousel = document.querySelector('.pets__carousel');
+const cards = document.querySelectorAll('.pets__cards');
+const cardsPrev = document.querySelector('.pets__cards_prev');
+const cardsCurrent = document.querySelector('.pets__cards_current');
+const cardsNext = document.querySelector('.pets__cards_next');
+
 
 // Menu Burger
 
@@ -47,9 +54,9 @@ const toModal = pet => `
           <p class="modal__description">${pet.description}</p>
           <ul class="modal__list">
             <li class="modal__item"><b>Age:</b> ${pet.age}</li>
-            <li class="modal__item"><b>Inoculations:</b> ${pet.inoculations}</li>
-            <li class="modal__item"><b>Diseases:</b> ${pet.diseases}</li>
-            <li class="modal__item"><b>Parasites:</b> ${pet.parasites}</li>
+            <li class="modal__item"><b>Inoculations:</b> ${pet.inoculations.join(', ')}</li>
+            <li class="modal__item"><b>Diseases:</b> ${pet.diseases.join(', ')}</li>
+            <li class="modal__item"><b>Parasites:</b> ${pet.parasites.join(', ')}</li>
           </ul>
         </div>
         <button class="button button_transparent button_close"></button>
@@ -104,3 +111,65 @@ function closeModal() {
   modalContent.innerHTML = "";
 };
 
+// Carousel
+
+let petsCurrent = [];
+
+function getRandomPets() {
+  let petsRandom = [];
+  while (petsRandom.length < 3) {
+    let index = Math.floor(Math.random() * 8);
+    if(!petsRandom.includes(pets[index]) && !petsCurrent.includes(pets[index])) {
+      petsRandom.push(pets[index]);
+    }
+  }
+  petsCurrent = petsRandom;
+  return petsCurrent;
+};
+
+function generateList(pets, parent) {
+  for(const pet of pets) {
+    const petElement = document.createElement('div');
+    parent.append(petElement);   
+    petElement.outerHTML = toCard(pet);
+  }
+};
+
+function toCard (pet) {
+  return `
+  <div class="pets__card" data-name="${pet.name}">
+    <img src="${pet.img}" alt="${pet.name}" class="pets__image">
+    <h4 class="pets__name">${pet.name}</h4>
+    <button class="button button_transparent">Learn more</button>
+  </div>
+`};
+ 
+generateList(getRandomPets(), cardsCurrent);
+generateList(getRandomPets(), cardsPrev);
+generateList(getRandomPets(), cardsNext);
+
+btnPrev.onclick = moveLeft;
+btnNext.onclick = moveRight;
+
+function moveLeft() {
+  carousel.classList.add('animation_left');
+};
+
+function moveRight() {
+  carousel.classList.add('animation_right');
+};
+
+carousel.addEventListener('animationend', (animationEvent) => {  
+
+  if (animationEvent.animationName === 'move-left') {
+    carousel.classList.remove('animation_left');
+    cardsCurrent.innerHTML = cardsPrev.innerHTML;
+    cardsPrev.innerHTML = "";
+    generateList(getRandomPets(), cardsPrev);
+  } else {
+    carousel.classList.remove('animation_right');
+    cardsCurrent.innerHTML = cardsNext.innerHTML;
+    cardsNext.innerHTML = "";
+    generateList(getRandomPets(), cardsNext);
+  };
+});

@@ -204,6 +204,37 @@
     text-align: center;
   }
 
+  &__wrapper {
+    margin: 0 53px;
+    width: 990px;
+    overflow: hidden;
+  
+    @media (max-width: $tablet-width) {
+      margin: 0 12px;
+      width: 580px;
+    }
+  
+    @media (max-width: $mobile-width) {
+      margin: 0;
+      width: 270px;
+    }
+  }
+  
+  &__carousel {
+    position: relative;
+    display: flex;
+    left: -1010px;
+    gap: 20px;
+  
+    @media (max-width: $tablet-width) {
+      left: -600px;
+    }
+  
+    @media (max-width: $mobile-width) {
+      left: -290px;
+    }
+  }
+
   &__slider {
     display: flex;
     align-items: center;
@@ -213,7 +244,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 53px;
     gap: 90px;
   }
 
@@ -258,7 +288,6 @@
   @media (max-width: $tablet-width) {
     &__cards {      
       gap: 40px;
-      margin: 0 12px;
     }
 
     &__card:last-child {
@@ -296,6 +325,26 @@
       display: none;
     }
   }
+}
+
+@keyframes move-right {
+  from {left: calc(-100% - 20px);}
+  to {left: calc(-200% - 40px);}
+}
+
+.animation_right {
+  animation-name: move-right;
+  animation-duration: 0.5s;
+}
+
+@keyframes move-left {
+  from {left: calc(-100% - 20px);}
+  to {left: 0;}
+}
+
+.animation_left {
+  animation-name: move-left;
+  animation-duration: 0.5s;
 }
 
 .help {
