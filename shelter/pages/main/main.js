@@ -1,5 +1,4 @@
-console.log(`Добрый день.
-Если у Вас будет такая возможность, то прошу перепроверить мою работу в четверг (дорабатываю рандом слайдера).
+console.log(`Бдагодарю за проверку.
 Хорошего дня!`);
 
 const petsImport = await fetch('../../assets/pets.json');
@@ -143,9 +142,9 @@ function toCard (pet) {
     <button class="button button_transparent">Learn more</button>
   </div>
 `};
- 
-generateList(getRandomPets(), cardsCurrent);
+
 generateList(getRandomPets(), cardsPrev);
+generateList(getRandomPets(), cardsCurrent);
 generateList(getRandomPets(), cardsNext);
 
 btnPrev.onclick = moveLeft;
