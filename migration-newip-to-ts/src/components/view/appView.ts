@@ -3,19 +3,19 @@ import Sources from './sources/sources';
 import { EverythingInt, SourcesInt } from '../../types/types';
 
 export class AppView {
-    news: InstanceType<typeof News>;
-    sources: InstanceType<typeof Sources>;
+    private news: InstanceType<typeof News>;
+    private sources: InstanceType<typeof Sources>;
     constructor() {
         this.news = new News();
         this.sources = new Sources();
     }
 
-    drawNews(data: EverythingInt | SourcesInt): void {
+    public drawNews(data: EverythingInt | SourcesInt): void {
         const values = data?.articles ? data?.articles : [];
         this.news.draw(values);
     }
 
-    drawSources(data: EverythingInt | SourcesInt): void {
+    public drawSources(data: EverythingInt | SourcesInt): void {
         const values = data?.sources ? data?.sources : [];
         this.sources.draw(values);
     }

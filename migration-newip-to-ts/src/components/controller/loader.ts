@@ -1,8 +1,8 @@
 import { EverythingInt, SourcesInt, ErrStatus } from '../../types/types';
 
 class Loader {
-    baseLink: string;
-    options: Record<string, string>;
+    private readonly baseLink: string;
+    private options: Record<string, string>;
     constructor(baseLink: string, options: Record<string, string>) {
         this.baseLink = baseLink;
         this.options = options;
@@ -10,16 +10,16 @@ class Loader {
 
     protected getResp(
         { endpoint = '', options = {} },
-        callback: (data: EverythingInt | SourcesInt) => void = () => {
+        callback: (data: EverythingInt | SourcesInt) => void = (): void => {
             console.error('No callback for GET response');
         }
     ): void {
         this.load('GET', endpoint, callback, options);
     }
 
-    errorHandler(res: Response): Response {
+    private errorHandler(res: Response): Response {
         if (!res.ok) {
-            if (res.status === ErrStatus.Unauthorized || res.status === ErrStatus.PaymentRequired)
+            if (res.status === ErrStatus.Unauthorized || res.status === ErrStatus.NotFound)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
             throw Error(res.statusText);
         }
@@ -27,7 +27,7 @@ class Loader {
         return res;
     }
 
-    makeUrl(options: Record<string, string>, endpoint: string): string {
+    private makeUrl(options: Record<string, string>, endpoint: string): string {
         const urlOptions = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
 
@@ -38,7 +38,12 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load(method: 'GET', endpoint: string, callback: (data: EverythingInt | SourcesInt) => void, options = {}): void {
+    protected load(
+        method: 'GET',
+        endpoint: string,
+        callback: (data: EverythingInt | SourcesInt) => void,
+        options = {}
+    ): void {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => res.json())

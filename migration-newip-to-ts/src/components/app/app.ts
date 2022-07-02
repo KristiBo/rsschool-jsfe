@@ -3,14 +3,14 @@ import { AppView } from '../view/appView';
 import { EverythingInt, SourcesInt } from '../../types/types';
 
 class App {
-    controller: InstanceType<typeof AppController>;
-    view: InstanceType<typeof AppView>;
+    private controller: InstanceType<typeof AppController>;
+    private view: InstanceType<typeof AppView>;
     constructor() {
         this.controller = new AppController();
         this.view = new AppView();
     }
 
-    start(): void {
+    protected start(): void {
         (document.querySelector('.sources') as HTMLElement).addEventListener('click', (e) =>
             this.controller.getNews(e, (data: EverythingInt | SourcesInt) => this.view.drawNews(data))
         );

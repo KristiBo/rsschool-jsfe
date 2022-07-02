@@ -34,5 +34,5 @@ export type SourcesType = {
 
 export enum ErrStatus {
     Unauthorized = 401,
-    PaymentRequired = 402,
+    NotFound = 404,
 }
