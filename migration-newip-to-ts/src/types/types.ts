@@ -2,6 +2,7 @@ export interface EverythingInt {
     status: string;
     totalResults: number;
     articles: Array<ArticlesType>;
+    sources?: Array<SourcesType>;
 }
 
 export type ArticlesType = {
@@ -18,6 +19,7 @@ export type ArticlesType = {
 export interface SourcesInt {
     status: string;
     sources: Array<SourcesType>;
+    articles?: Array<ArticlesType>;
 }
 
 export type SourcesType = {
@@ -29,3 +31,8 @@ export type SourcesType = {
     language: string;
     country: string;
 };
+
+export enum ErrStatus {
+    Unauthorized = 401,
+    PaymentRequired = 402,
+}
