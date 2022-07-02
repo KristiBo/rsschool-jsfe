@@ -1,4 +1,4 @@
-import { EverythingInt, SourcesInt, ErrStatus } from '../../types/types';
+import { EverythingInt, SourcesInt, ErrStatus, CallB } from '../../types/types';
 
 class Loader {
     private readonly baseLink: string;
@@ -10,7 +10,7 @@ class Loader {
 
     protected getResp(
         { endpoint = '', options = {} },
-        callback: (data: EverythingInt | SourcesInt) => void = (): void => {
+        callback: CallB<EverythingInt | SourcesInt> = (): void => {
             console.error('No callback for GET response');
         }
     ): void {
@@ -38,12 +38,7 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    protected load(
-        method: 'GET',
-        endpoint: string,
-        callback: (data: EverythingInt | SourcesInt) => void,
-        options = {}
-    ): void {
+    protected load(method: 'GET', endpoint: string, callback: CallB<EverythingInt | SourcesInt>, options = {}): void {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => res.json())

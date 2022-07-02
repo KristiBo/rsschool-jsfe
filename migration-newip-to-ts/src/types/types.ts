@@ -36,3 +36,5 @@ export enum ErrStatus {
     Unauthorized = 401,
     NotFound = 404,
 }
+
+export type CallB<Type> = (data: Type) => void;
