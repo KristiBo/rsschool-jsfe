@@ -1,4 +1,4 @@
-import { EverythingInt, SourcesInt, ErrStatus, CallB } from '../../types/types';
+import { EverythingInt, SourcesInt, ErrStatus, CallB } from '../types/types';
 
 class Loader {
     private readonly baseLink: string;
@@ -41,7 +41,7 @@ class Loader {
     protected load(method: 'GET', endpoint: string, callback: CallB<EverythingInt | SourcesInt>, options = {}): void {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
-            .then((res) => res.json())
+            .then((res): Promise<EverythingInt | SourcesInt> => res.json())
             .then((data: EverythingInt | SourcesInt) => callback(data))
             .catch((err: Error) => console.error(err));
     }

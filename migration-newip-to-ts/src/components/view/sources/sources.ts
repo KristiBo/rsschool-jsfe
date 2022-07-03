@@ -1,5 +1,5 @@
 import './sources.css';
-import { SourcesType } from '../../../types/types';
+import { SourcesType } from '../../types/types';
 
 class Sources {
     public draw(data: Array<SourcesType>): void {

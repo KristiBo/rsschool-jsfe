@@ -1,6 +1,6 @@
 import News from './news/news';
 import Sources from './sources/sources';
-import { EverythingInt, SourcesInt } from '../../types/types';
+import { EverythingInt, SourcesInt } from '../types/types';
 
 export class AppView {
     private news: InstanceType<typeof News>;

@@ -1,6 +1,6 @@
 import AppController from '../controller/controller';
 import { AppView } from '../view/appView';
-import { EverythingInt, SourcesInt } from '../../types/types';
+import { EverythingInt, SourcesInt } from '../types/types';
 
 class App {
     private controller: InstanceType<typeof AppController>;

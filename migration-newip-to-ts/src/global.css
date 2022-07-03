@@ -1,35 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100vh;
     color: #fff;
     background: #17181c;
     font-family: sans-serif;
 }
 
+body::-webkit-scrollbar {
+    width: 5px;
+    background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #5c4e4e;
+}
+
+main {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
 header {
-    padding: 10px 30px;
+    padding: 20px 10px;
 }
 
 header h1 {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 800;
+    text-align: center;
 }
 
-footer {
-    height: 100px;
+footer {    
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 65px;
+    width: 100%;
 }
 footer .copyright {
     font-size: 14px;
-    color: #333;
+    color: #fff;
     text-align: center;
 }
+
 footer .copyright a {
-    color: #444;
+    color: #fff;
+    transition: 1s;
 }
+
 footer .copyright a:hover {
-    color: #555;
+    color: #69db7e;
 }
+
 footer .copyright:before {
     content: '©';
+}
+
+.github-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.github,
+.rs-link {
+    transition: 1s;
+    filter: invert(100%);
+    max-height: 40px;
+}
+
+.github:hover,
+.rs-link:hover {
+    filter: invert(83%) sepia(67%) saturate(412%) hue-rotate(61deg) brightness(90%) contrast(89%);
+}
+
+.github {
+    max-width: 40px;
+    width: 100%;
+}
+
+.rs {
+    max-height: 40px;
+    width: 100%;
+}
+
+@media (min-width: 640px) {    
+    header h1 {        
+        font-size: 40px;
+        text-align: start;
+    }
 }

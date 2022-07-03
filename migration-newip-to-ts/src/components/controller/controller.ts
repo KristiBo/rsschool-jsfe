@@ -1,5 +1,5 @@
 import AppLoader from './appLoader';
-import { EverythingInt, SourcesInt, CallB } from '../../types/types';
+import { EverythingInt, SourcesInt, CallB } from '../types/types';
 
 class AppController extends AppLoader {
     public getSources(callback: CallB<EverythingInt | SourcesInt>): void {
