@@ -50,7 +50,7 @@
     white-space: nowrap;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
     .sources {
         justify-content: space-evenly;
     }
