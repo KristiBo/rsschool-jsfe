@@ -1,0 +1,302 @@
+[
+  {
+    "name": "Yamaha Pacifica 112JL",
+    "brand": "Yamaha",
+    "type": "Electric",
+    "color": "Black",
+    "hand": "Left",
+    "quantity": 2,
+    "price": 249.00,
+    "img": "./assets/img/yamaha-112jl.jpg"
+  },
+  {
+    "name": "Squier Mini Stratocaster",
+    "brand": "Squier",
+    "type": "Electric",
+    "color": "Black",
+    "hand": "Left",
+    "quantity": 3,
+    "price": 149.00,
+    "img": "./assets/img/squier-mini-stratocaster.jpg"
+  },
+  {
+    "name": "LTD EC-401",
+    "brand": "LTD",
+    "type": "Electric",
+    "color": "White",
+    "hand": "Right",
+    "quantity": 1,
+    "price": 899.00,
+    "img": "./assets/img/ltd-ec-401.jpg"
+  },
+  {
+    "name": "LTD H-1001",
+    "brand": "LTD",
+    "type": "Electric",
+    "color": "Blue",
+    "hand": "Right",
+    "quantity": 1,
+    "price": 1379.00,
+    "img": "./assets/img/ltd-h-1001.jpg"
+  },
+  {
+    "name": "LTD EC-256FM",
+    "brand": "LTD",
+    "type": "Electric",
+    "color": "Wood",
+    "hand": "Right",
+    "quantity": 4,
+    "price": 449.00,
+    "img": "./assets/img/ltd-ec-256fm.jpg"
+  },
+  {
+    "name": "Squier FSR Jazzmaster",
+    "brand": "Squier",
+    "type": "Electric",
+    "color": "Black",
+    "hand": "Right",
+    "quantity": 5,
+    "price": 299.00,
+    "img": "./assets/img/squier-fsr.jpg"
+  },
+  {
+    "name": "LTD EC-407",
+    "brand": "LTD",
+    "type": "Electric",
+    "color": "Black",
+    "hand": "Right",
+    "quantity": 2,
+    "price": 979.00,
+    "img": "./assets/img/ltd-ec-407.jpg"
+  },
+  {
+    "name": "LTD MH-1007",
+    "brand": "LTD",
+    "type": "Electric",
+    "color": "White",
+    "hand": "Right",
+    "quantity": 1,
+    "price": 1679.00,
+    "img": "./assets/img/ltd-mh-1007.jpg"
+  },
+  {
+    "name": "Squier Starcaster",
+    "brand": "Squier",
+    "type": "Electric",
+    "color": "White",
+    "hand": "Right",
+    "quantity": 3,
+    "price": 299.00,
+    "img": "./assets/img/squier-affinity-starcaster-mn.jpg"
+  },
+  {
+    "name": "Squier '70s Jazz Bass",
+    "brand": "Squier",
+    "type": "Basses",
+    "color": "Wood",
+    "hand": "Right",
+    "quantity": 2,
+    "price": 414.00,
+    "img": "./assets/img/squier-classic-vibe-70s.jpg"
+  },
+  {
+    "name": "Yamaha TRBX304",
+    "brand": "Yamaha",
+    "type": "Basses",
+    "color": "White",
+    "hand": "Right",
+    "quantity": 4,
+    "price": 419.00,
+    "img": "./assets/img/yamaha-trbx304.jpg"
+  },
+  {
+    "name": "Yamaha TRBX604",
+    "brand": "Yamaha",
+    "type": "Basses",
+    "color": "Wood",
+    "hand": "Right",
+    "quantity": 1,
+    "price": 699.00,
+    "img": "./assets/img/yamaha-trbx604.jpg"
+  },
+  {
+    "name": "LTD F-5E",
+    "brand": "LTD",
+    "type": "Basses",
+    "color": "Wood",
+    "hand": "Right",
+    "quantity": 2,
+    "price": 749.00,
+    "img": "./assets/img/ltd-f-5e-mahogany.jpg"
+  },
+  {
+    "name": "Yamaha TRBX505",
+    "brand": "Yamaha",
+    "type": "Basses",
+    "color": "White",
+    "hand": "Right",
+    "quantity": 5,
+    "price": 619.00,
+    "img": "./assets/img/yamaha-trbx505twh.jpg"
+  },
+  {
+    "name": "LTD AP-5",
+    "brand": "LTD",
+    "type": "Basses",
+    "color": "Blue",
+    "hand": "Left",
+    "quantity": 3,
+    "price": 999.00,
+    "img": "./assets/img/ltd-ap-5-pb-lh.jpg"
+  },
+  {
+    "name": "LTD B-205SM",
+    "brand": "LTD",
+    "type": "Basses",
+    "color": "Wood",
+    "hand": "Left",
+    "quantity": 3,
+    "price": 629.00,
+    "img": "./assets/img/ltd-b-205sm-ns-lh.jpg"
+  },
+  {
+    "name": "Yamaha TRB1006J",
+    "brand": "Yamaha",
+    "type": "Basses",
+    "color": "Wood",
+    "hand": "Right",
+    "quantity": 1,
+    "price": 1359.00,
+    "img": "./assets/img/yamaha-trb1006j.jpg"
+  },
+  {
+    "name": "LTD B-206SM",
+    "brand": "LTD",
+    "type": "Basses",
+    "color": "Black",
+    "hand": "Right",
+    "quantity": 4,
+    "price": 699.00,
+    "img": "./assets/img/ltd-b-206sm-stblks.jpg"
+  },
+  {
+    "name": "LTD TL-6 AQMB",
+    "brand": "LTD",
+    "type": "Western",
+    "color": "Blue",
+    "hand": "Left",
+    "quantity": 2,
+    "price": 749.00,
+    "img": "./assets/img/ltd-tl-6-aqmb-lh.jpg"
+  },
+  {
+    "name": "Yamaha FG820L",
+    "brand": "Yamaha",
+    "type": "Western",
+    "color": "Wood",
+    "hand": "Left",
+    "quantity": 3,
+    "price": 459.00,
+    "img": "./assets/img/yamaha-fg820l.jpg"
+  },
+  {
+    "name": "Yamaha CPX700II-12",
+    "brand": "Yamaha",
+    "type": "Western",
+    "color": "Wood",
+    "hand": "Right",
+    "quantity": 1,
+    "price": 849.00,
+    "img": "./assets/img/yamaha-cpx700-12nt.jpg"
+  },
+  {
+    "name": "Alvarez AD60-12CESHB",
+    "brand": "Alvarez",
+    "type": "Western",
+    "color": "Wood",
+    "hand": "Right",
+    "quantity": 3,
+    "price": 629.00,
+    "img": "./assets/img/alvarez-ad60-12ceshb.jpg"
+  },
+  {
+    "name": "Alvarez AD60-12CEBK",
+    "brand": "Alvarez",
+    "type": "Western",
+    "color": "Black",
+    "hand": "Right",
+    "quantity": 4,
+    "price": 649.00,
+    "img": "./assets/img/alvarez-ad60-12cebk.jpg"
+  },
+  {
+    "name": "Alvarez RS26",
+    "brand": "Alvarez",
+    "type": "Western",
+    "color": "Wood",
+    "hand": "Right",
+    "quantity": 5,
+    "price": 209.00,
+    "img": "./assets/img/alvarez-rs26.jpg"
+  },
+  {
+    "name": "Alvarez ABT60CESHB",
+    "brand": "Alvarez",
+    "type": "Western",
+    "color": "Wood",
+    "hand": "Right",
+    "quantity": 1,
+    "price": 629.00,
+    "img": "./assets/img/alvarez-abt60.jpg"
+  },
+  {
+    "name": "La Mancha CM/59",
+    "brand": "La Mancha",
+    "type": "Classical",
+    "color": "Wood",
+    "hand": "Left",
+    "quantity": 3,
+    "price": 219.00,
+    "img": "./assets/img/la-mancha-rubi-cm59.jpg"
+  },
+  {
+    "name": "La Mancha LSM/63-N",
+    "brand": "La Mancha",
+    "type": "Classical",
+    "color": "Wood",
+    "hand": "Left",
+    "quantity": 4,
+    "price": 149.00,
+    "img": "./assets/img/la-mancha-rubinito-lsm63.jpg"
+  },
+  {
+    "name": "Yamaha C40",
+    "brand": "Yamaha",
+    "type": "Classical",
+    "color": "Wood",
+    "hand": "Right",
+    "quantity": 5,
+    "price": 149.00,
+    "img": "./assets/img/yamaha-c40.jpg"
+  },
+  {
+    "name": "La Mancha SMX/63",
+    "brand": "La Mancha",
+    "type": "Classical",
+    "color": "Wood",
+    "hand": "Right",
+    "quantity": 2,
+    "price": 279.00,
+    "img": "./assets/img/la-mancha-rubi-smx63.jpg"
+  },
+  {
+    "name": "Yamaha CG142S",
+    "brand": "Yamaha",
+    "type": "Classical",
+    "color": "Black",
+    "hand": "Right",
+    "quantity": 1,
+    "price": 339.00,
+    "img": "./assets/img/yamaha-cg142s.jpg"
+  }
+]

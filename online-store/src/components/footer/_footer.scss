@@ -1,0 +1,38 @@
+.footer {
+  @include flex-center;
+  width: 100%;
+  background-color: $color-dark-slate-gray;
+  color: $color-white;
+
+  &__container {
+    flex-direction: row;
+    height: 100%;
+    padding: 10px 0;
+  }
+}
+
+.github {
+  @include flex-center;
+  gap: 20px;
+
+  &__logo {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.github__link,
+.rs__link {
+  transition: $transition-time;
+  filter: invert(100%);
+}
+
+.github__link:hover,
+.rs__link:hover {
+  filter: invert(0%);
+}
+
+.rs__logo {
+  width: 94px;
+  height: 35px;
+}

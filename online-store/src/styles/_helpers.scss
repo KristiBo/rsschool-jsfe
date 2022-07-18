@@ -1,0 +1,42 @@
+$color-white: #ffffff;
+$color-light-gray: #f0f0f0;
+$color-light-blue: #6fa3a1;
+$color-gray: #969494;
+$color-dark-slate-gray: #3f5052;
+$color-deep-cyan: #004445;
+$color-red: #ff0000;
+
+$border-radius: 5px;
+$border-btn: 2px solid $color-deep-cyan;
+$border-filters: 1px solid $color-deep-cyan;
+$shadow-cyan: 0px 0px 5px 2px $color-deep-cyan;
+$shadow-red: 0px 0px 5px 2px $color-red;
+
+$transition-time: 0.5s;
+
+@mixin font-basic {
+  font-family: "Sansita", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@mixin font-bold {
+  font-family: "Sansita", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button {
+  width: 100%;
+  border: $border-btn;
+  border-radius: $border-radius;
+  background-color: transparent;
+  cursor: pointer;
+  transition: $transition-time;
+}

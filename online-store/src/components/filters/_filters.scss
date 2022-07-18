@@ -1,0 +1,65 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 15px;
+  gap: 20px;
+  background-color: $color-white;
+  border-radius: $border-radius;
+  box-shadow: $shadow-cyan;
+
+  &__sort {
+    max-width: 100%;
+    @include font-basic;
+    outline: none;
+    border: $border-btn;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: $transition-time;
+
+    & option {
+      background-color: $color-light-gray;
+    }
+
+    &:hover {
+      box-shadow: $shadow-cyan;
+    }
+  }
+
+  &__brand {
+    padding-top: 20px;
+    border-top: $border-filters;
+  }
+
+  &__button-reset,
+  &__button-clear {
+    padding: 2px;
+    @include button;
+    @include font-basic;
+  }
+
+  &__button-reset:hover,
+  &__button-clear:hover {
+    box-shadow: $shadow-cyan;
+  }
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 5px;
+  gap: 15px;
+  border-bottom: $border-filters;
+
+  &__name {
+    display: block;
+    width: 100%;
+    @include font-bold;
+  }
+
+  &__checkbox {
+    @include flex-center;
+    gap: 7px;
+  }
+}
