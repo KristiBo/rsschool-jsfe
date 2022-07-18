@@ -1,20 +1,20 @@
 import AppController from '../controller/controller';
 import { AppView } from '../view/appView';
-import { EverythingInt, SourcesInt } from '../types/types';
+import { ArticlesResp, SourcesResp } from '../types/types';
 
 class App {
-    private controller: InstanceType<typeof AppController>;
-    private view: InstanceType<typeof AppView>;
+    private controller: AppController;
+    private view: AppView;
     constructor() {
         this.controller = new AppController();
         this.view = new AppView();
     }
 
-    public start(): void {
+    start(): void {
         (document.querySelector('.sources') as HTMLElement).addEventListener('click', (e) =>
-            this.controller.getNews(e, (data: EverythingInt | SourcesInt) => this.view.drawNews(data))
+            this.controller.getNews(e, (data: ArticlesResp | SourcesResp) => this.view.drawNews(data))
         );
-        this.controller.getSources((data: EverythingInt | SourcesInt) => this.view.drawSources(data));
+        this.controller.getSources((data: ArticlesResp | SourcesResp) => this.view.drawSources(data));
     }
 }
 

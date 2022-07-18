@@ -1,11 +1,11 @@
-export interface EverythingInt {
+export interface ArticlesResp {
     status: string;
     totalResults: number;
-    articles: Array<ArticlesType>;
-    sources?: Array<SourcesType>;
+    articles: ArticlesInfo[];
+    sources?: SourcesInfo[];
 }
 
-export type ArticlesType = {
+export type ArticlesInfo = {
     source: { id: string; name: string };
     author: string;
     title: string;
@@ -16,13 +16,13 @@ export type ArticlesType = {
     content: string;
 };
 
-export interface SourcesInt {
+export interface SourcesResp {
     status: string;
-    sources: Array<SourcesType>;
-    articles?: Array<ArticlesType>;
+    sources: SourcesInfo[];
+    articles?: ArticlesInfo[];
 }
 
-export type SourcesType = {
+export type SourcesInfo = {
     id: string;
     name: string;
     description: string;

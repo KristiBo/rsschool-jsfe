@@ -1,8 +1,8 @@
 import AppLoader from './appLoader';
-import { EverythingInt, SourcesInt, CallB } from '../types/types';
+import { ArticlesResp, SourcesResp, CallB } from '../types/types';
 
 class AppController extends AppLoader {
-    public getSources(callback: CallB<EverythingInt | SourcesInt>): void {
+    getSources(callback: CallB<ArticlesResp | SourcesResp>): void {
         super.getResp(
             {
                 endpoint: 'sources',
@@ -11,7 +11,7 @@ class AppController extends AppLoader {
         );
     }
 
-    public getNews(e: Event, callback: CallB<EverythingInt | SourcesInt>): void {
+    getNews(e: Event, callback: CallB<ArticlesResp | SourcesResp>): void {
         let target = e.target as HTMLTemplateElement;
         const newsContainer = e.currentTarget as HTMLTemplateElement;
 
