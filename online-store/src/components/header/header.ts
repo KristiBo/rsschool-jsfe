@@ -18,4 +18,7 @@ class Header {
   }
 }
 
+const search = document.getElementById('search');
+const searchInput = document.getElementById('search-input');
+
 export default Header;

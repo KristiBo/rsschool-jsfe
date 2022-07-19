@@ -32,6 +32,17 @@ $transition-time: 0.5s;
   align-items: center;
 }
 
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-wrap-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 @mixin button {
   width: 100%;
   border: $border-btn;

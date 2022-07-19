@@ -5,8 +5,7 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   margin: 0 auto;
   height: 100%;
   @include font-basic;
@@ -31,9 +30,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main {
-  display: flex;
+  @include flex-column;
   flex: 1 1 auto;
-  flex-direction: column;
   margin: 0 auto;
   width: 100%;
   background-color: $color-light-gray;

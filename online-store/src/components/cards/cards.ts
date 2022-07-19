@@ -1,53 +1,49 @@
 import Products from '../../interfaces/products';
+import ModalWindow from '../modal/modalWindow';
 
 class Card {
   create(data: Products[]): void {
     const cardsContainer: HTMLElement | null = document.getElementById('cards-container');
 
-    data.forEach((el) => {
-      const card = document.createElement('div');
-      card.classList.add('card');
+    data.forEach((el): void => {
+      const cardInner = `
+        <div class="card">
+          <img src="${el.img}" alt="guitar" class="card__img">
+          <h3 class="card__title">${el.name}</h3>
+          <ul class="card__list">
+            <li class="card__item"><strong>Type: </strong>${el.type}</li>
+            <li class="card__item"><strong>Color: </strong>${el.color}</li>
+            <li class="card__item"><strong>Hand: </strong>${el.hand}</li>
+            <li class="card__item"><strong>Quantity: </strong>${el.quantity}</li>
+          </ul>
+          <p class="card__price">${el.price} €</p>
+          <button class="card__button">Add to cart</button>
+        </div>`;
 
-      const cardImg = document.createElement('img');
-      cardImg.classList.add('card__img');
-      cardImg.setAttribute('src', el.img);
-      cardImg.alt = 'guitar';
+      cardsContainer ? (cardsContainer.innerHTML += cardInner) : new Error('Element not found');
+    });
+  }
 
-      const cardTitle = document.createElement('h3');
-      cardTitle.classList.add('card__title');
-      cardTitle.innerHTML = el.name;
+  addToCart(): void {
+    const cards = document.querySelectorAll('.card');
+    const cartQuantity: HTMLElement | null = document.querySelector('.cart__quantity');
+    const modal = new ModalWindow();
+    let count = 0;
 
-      const cardList = document.createElement('ul');
-      cardList.classList.add('card__list');
+    cards.forEach((card): void => {
+      card.addEventListener('click', (): void => {
+        card.classList.toggle('active');
+        card.classList.contains('active') ? (count += 1) : (count -= 1);
 
-      const cardItemType = document.createElement('li');
-      const cardItemColor = document.createElement('li');
-      const cardItemHand = document.createElement('li');
-      const cardItemQuantity = document.createElement('li');
+        if (count > 20) {
+          modal.open();
+          count = 20;
+          card.classList.remove('active');
+          modal.close();
+        }
 
-      const cardsItems = [cardItemType, cardItemColor, cardItemHand, cardItemQuantity];
-
-      cardsItems.forEach((item) => {
-        item.classList.add('card__item');
-        cardList.append(item);
+        cartQuantity ? (cartQuantity.innerHTML = `${count}`) : new Error('Element not found');
       });
-
-      cardItemType.innerHTML = `<strong>Type: </strong>${el.type}`;
-      cardItemColor.innerHTML = `<strong>Color: </strong>${el.color}`;
-      cardItemHand.innerHTML = `<strong>Hand: </strong>${el.hand}`;
-      cardItemQuantity.innerHTML = `<strong>Quantity: </strong>${el.quantity}`;
-
-      const cardPrice = document.createElement('p');
-      cardPrice.classList.add('card__price');
-      cardPrice.innerHTML = `${el.price} €`;
-
-      const cardBtn = document.createElement('button');
-      cardBtn.classList.add('card__button');
-      cardBtn.innerHTML = 'Add to cart';
-
-      card.append(cardImg, cardTitle, cardList, cardPrice, cardBtn);
-
-      cardsContainer ? cardsContainer.append(card) : new Error('Element not found');
     });
   }
 }

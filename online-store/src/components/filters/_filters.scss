@@ -1,6 +1,5 @@
 .filters {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   flex-wrap: wrap;
   padding: 15px;
   gap: 20px;
@@ -45,9 +44,7 @@
 }
 
 .filter {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  @include flex-wrap-center;
   padding-bottom: 5px;
   gap: 15px;
   border-bottom: $border-filters;
@@ -60,6 +57,10 @@
 
   &__checkbox {
     @include flex-center;
-    gap: 7px;
+    gap: 7px;    
   }
+}
+
+input[type=checkbox] {
+  cursor: pointer;
 }

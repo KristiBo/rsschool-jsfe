@@ -1,6 +1,7 @@
 class Filters {
   create(): void {
     const filtersContainer: HTMLElement | null = document.getElementById('filters-container');
+
     const filters = `
       <select name="select" class="filters__sort">
         <option value="all">Sort by:</option>
@@ -20,8 +21,8 @@ class Filters {
           <label for="alvarez">Alvarez</label>
         </div>
         <div class="filter__checkbox">
-          <input type="checkbox" id="mancha">
-          <label for="mancha">La Mancha</label>
+          <input type="checkbox" id="lamancha">
+          <label for="lamancha">LaMancha</label>
         </div>
         <div class="filter__checkbox">
           <input type="checkbox" id="ltd">
@@ -81,8 +82,8 @@ class Filters {
         </div>
       </div>
       <button class="filters__button-reset">Reset filters</button>
-      <button class="filters__button-clear">Clear all</button>
-      `;
+      <button class="filters__button-clear">Clear all</button>`;
+
     filtersContainer ? (filtersContainer.innerHTML = filters) : new Error('Element not found');
   }
 }

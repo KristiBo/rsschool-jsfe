@@ -1,0 +1,53 @@
+.modal {
+  &__overlay,
+  &__window {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &.open .modal__overlay,
+  &.open .modal__window {
+    opacity: 1;
+    z-index: 10;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    transition: $transition-time;
+  }
+
+  &__window {
+    @include flex-center;
+    padding: 10px;
+    min-height: 100%;
+    transition: $transition-time;
+  }
+
+  &__content {
+    @include flex-center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+    width: 280px;
+    height: 180px;
+    font-size: 20px;
+    color: $color-white;
+    background-color: $color-dark-slate-gray;
+    border-radius: $border-radius;
+    box-shadow: $shadow-cyan;
+  }
+
+  &__button {
+    width: 80px;
+    height: 35px;
+    font: inherit;
+    border-radius: $border-radius;
+    border: $border-btn;
+    cursor: pointer;
+  }
+}

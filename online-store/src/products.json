@@ -250,8 +250,8 @@
     "img": "./assets/img/alvarez-abt60.jpg"
   },
   {
-    "name": "La Mancha CM/59",
-    "brand": "La Mancha",
+    "name": "LaMancha CM/59",
+    "brand": "LaMancha",
     "type": "Classical",
     "color": "Wood",
     "hand": "Left",
@@ -260,8 +260,8 @@
     "img": "./assets/img/la-mancha-rubi-cm59.jpg"
   },
   {
-    "name": "La Mancha LSM/63-N",
-    "brand": "La Mancha",
+    "name": "LaMancha LSM/63-N",
+    "brand": "LaMancha",
     "type": "Classical",
     "color": "Wood",
     "hand": "Left",
@@ -280,8 +280,8 @@
     "img": "./assets/img/yamaha-c40.jpg"
   },
   {
-    "name": "La Mancha SMX/63",
-    "brand": "La Mancha",
+    "name": "LaMancha SMX/63",
+    "brand": "LaMancha",
     "type": "Classical",
     "color": "Wood",
     "hand": "Right",
