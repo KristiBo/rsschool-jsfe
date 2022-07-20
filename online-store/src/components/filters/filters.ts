@@ -1,4 +1,13 @@
+import SortProducts from './sortProducts';
+import noUiSlider from '../../../node_modules/nouislider/dist/nouislider';
+
 class Filters {
+  sort: SortProducts;
+
+  constructor() {
+    this.sort = new SortProducts();
+  }
+
   create(): void {
     const filtersContainer: HTMLElement | null = document.getElementById('filters-container');
 
@@ -85,6 +94,147 @@ class Filters {
       <button class="filters__button-clear" id="button-clear">Clear all</button>`;
 
     filtersContainer ? (filtersContainer.innerHTML = filters) : new Error('Element not found');
+  }
+
+  sliderCreate(): void {
+    const sliderPrice: HTMLElement | null = document.getElementById('slider-price');
+    const sliderQuantity: HTMLElement | null = document.getElementById('slider-quantity');
+
+    if (sliderPrice) {
+      noUiSlider
+        .create(sliderPrice, {
+          start: [149, 1679],
+          tooltips: true,
+          connect: true,
+          step: 100,
+          range: {
+            min: 149,
+            max: 1679,
+          },
+          format: {
+            to: function (value) {
+              return value.toFixed();
+            },
+            from: function (value) {
+              return parseInt(value);
+            },
+          },
+        })
+        .on('update', (value): void => {
+          this.sort.filtersHandler('price', value);
+        });
+    } else {
+      new Error('Element not found');
+    }
+
+    if (sliderQuantity) {
+      noUiSlider
+        .create(sliderQuantity, {
+          start: [1, 5],
+          tooltips: true,
+          connect: true,
+          step: 1,
+          range: {
+            min: 1,
+            max: 5,
+          },
+          format: {
+            to: function (value) {
+              return value.toFixed();
+            },
+            from: function (value) {
+              return parseInt(value);
+            },
+          },
+        })
+        .on('update', (value): void => {
+          this.sort.filtersHandler('quantity', value);
+        });
+    } else {
+      new Error('Element not found');
+    }
+  }
+
+  addListeners(): void {
+    const searchInput: HTMLInputElement | null = document.getElementById('search-input') as HTMLInputElement;
+    searchInput.addEventListener('input', () => {
+      this.sort.filtersHandler('search', searchInput.value);
+    });
+
+    const filtersSort = document.getElementById('filters-sort') as HTMLSelectElement;
+    filtersSort.addEventListener('input', () => {
+      this.sort.filtersHandler('sort', filtersSort.value);
+    });
+
+    const filterHand = document.getElementById('left') as HTMLInputElement;
+    filterHand.addEventListener('click', () => {
+      filterHand.checked ? this.sort.filtersHandler('hand', 'Left') : this.sort.filtersHandler('hand', 'Right');
+    });
+
+    const brandAlvarez = document.getElementById('alvarez') as HTMLInputElement;
+    brandAlvarez.addEventListener('click', () => {
+      this.sort.filtersHandler('brand', 'alvarez');
+    });
+
+    const brandLamancha = document.getElementById('lamancha') as HTMLInputElement;
+    brandLamancha.addEventListener('click', () => {
+      this.sort.filtersHandler('brand', 'lamancha');
+    });
+
+    const brandLtd = document.getElementById('ltd') as HTMLInputElement;
+    brandLtd.addEventListener('click', () => {
+      this.sort.filtersHandler('brand', 'ltd');
+    });
+
+    const brandSquier = document.getElementById('squier') as HTMLInputElement;
+    brandSquier.addEventListener('click', () => {
+      this.sort.filtersHandler('brand', 'squier');
+    });
+
+    const brandYamaha = document.getElementById('yamaha') as HTMLInputElement;
+    brandYamaha.addEventListener('click', () => {
+      this.sort.filtersHandler('brand', 'yamaha');
+    });
+
+    const typeBases = document.getElementById('basses') as HTMLInputElement;
+    typeBases.addEventListener('click', () => {
+      this.sort.filtersHandler('type', 'basses');
+    });
+
+    const typeElectric = document.getElementById('electric') as HTMLInputElement;
+    typeElectric.addEventListener('click', () => {
+      this.sort.filtersHandler('type', 'electric');
+    });
+
+    const typeClassical = document.getElementById('classical') as HTMLInputElement;
+    typeClassical.addEventListener('click', () => {
+      this.sort.filtersHandler('type', 'classical');
+    });
+
+    const typeWestern = document.getElementById('western') as HTMLInputElement;
+    typeWestern.addEventListener('click', () => {
+      this.sort.filtersHandler('type', 'western');
+    });
+
+    const colorBlack = document.getElementById('black') as HTMLInputElement;
+    colorBlack.addEventListener('click', () => {
+      this.sort.filtersHandler('color', 'black');
+    });
+
+    const colorBlue = document.getElementById('blue') as HTMLInputElement;
+    colorBlue.addEventListener('click', () => {
+      this.sort.filtersHandler('color', 'blue');
+    });
+
+    const colorWhite = document.getElementById('white') as HTMLInputElement;
+    colorWhite.addEventListener('click', () => {
+      this.sort.filtersHandler('color', 'white');
+    });
+
+    const colorWood = document.getElementById('wood') as HTMLInputElement;
+    colorWood.addEventListener('click', () => {
+      this.sort.filtersHandler('color', 'wood');
+    });
   }
 }
 

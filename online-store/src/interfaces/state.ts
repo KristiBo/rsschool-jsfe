@@ -1,4 +1,4 @@
-interface StateDescription {
+interface State {
   search: string;
   sort: string;
   price: (number | string)[];
@@ -9,4 +9,4 @@ interface StateDescription {
   hand: string;
 }
 
-export default StateDescription;
+export default State;

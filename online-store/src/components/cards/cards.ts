@@ -8,7 +8,7 @@ class Card {
 
     data.forEach((el): void => {
       const cardInner = `
-        <div class="card" id="${el.id}">
+        <div class="card">
           <img src="${el.img}" alt="guitar" class="card__img">
           <h3 class="card__title">${el.name}</h3>
           <ul class="card__list">
@@ -32,7 +32,7 @@ class Card {
     let count = 0;
 
     cards.forEach((card): void => {
-      card.addEventListener('click', (): void => {
+      card.addEventListener('click', () => {
         card.classList.toggle('active');
         card.classList.contains('active') ? (count += 1) : (count -= 1);
 

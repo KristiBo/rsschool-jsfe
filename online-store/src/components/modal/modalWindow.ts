@@ -1,6 +1,6 @@
 class ModalWindow {
   create(): void {
-    const modal = `
+    const modalInner = `
       <div class="modal">
         <div class="modal__overlay">
           <div class="modal__window">
@@ -12,7 +12,7 @@ class ModalWindow {
         </div>
       </div>`;
 
-    document.body.innerHTML += modal;
+    document.body.innerHTML += modalInner;
   }
 
   open(): void {
@@ -23,7 +23,7 @@ class ModalWindow {
   close(): void {
     const button: HTMLElement | null = document.querySelector('.modal__button');
     const modal: HTMLElement | null = document.querySelector('.modal');
-    const closeModal = () => (modal ? modal.classList.remove('open') : new Error('Element not found'));
+    const closeModal = (): void | Error => (modal ? modal.classList.remove('open') : new Error('Element not found'));
     button ? button.addEventListener('click', () => closeModal()) : new Error('Element not found');
   }
 }
