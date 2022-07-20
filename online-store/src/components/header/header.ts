@@ -1,4 +1,4 @@
-class Header {
+export class Header {
   create(): void {
     const headerContainer: HTMLElement | null = document.getElementById('header-container');
     const headerInner = `
@@ -6,9 +6,9 @@ class Header {
       <img src="./assets/icons/logo.png" alt="logo" class="header__logo">
     </a>
     <h1 class="header__title">Guitar Store</h1>
-    <form class="header__search search" id="search">
+    <div class="header__search search">
       <input class="search__input" id="search-input" type="search" name="search" autofocus autocomplete="off" placeholder="Search...">
-    </form>
+    </div>
     <div class="header__cart cart">
       <img src="./assets/icons/shopping-cart.svg" alt="shopping-cart" class="cart__icon">
       <span class="cart__quantity">0</span>
@@ -17,8 +17,5 @@ class Header {
     headerContainer ? (headerContainer.innerHTML = headerInner) : new Error('Element not found');
   }
 }
-
-const search = document.getElementById('search');
-const searchInput = document.getElementById('search-input');
 
 export default Header;

@@ -7,7 +7,8 @@
     "hand": "Left",
     "quantity": 2,
     "price": 249.00,
-    "img": "./assets/img/yamaha-112jl.jpg"
+    "img": "./assets/img/yamaha-112jl.jpg",
+    "id": "card1"
   },
   {
     "name": "Squier Mini Stratocaster",
@@ -17,7 +18,8 @@
     "hand": "Left",
     "quantity": 3,
     "price": 149.00,
-    "img": "./assets/img/squier-mini-stratocaster.jpg"
+    "img": "./assets/img/squier-mini-stratocaster.jpg",
+    "id": "card2"
   },
   {
     "name": "LTD EC-401",
@@ -27,7 +29,8 @@
     "hand": "Right",
     "quantity": 1,
     "price": 899.00,
-    "img": "./assets/img/ltd-ec-401.jpg"
+    "img": "./assets/img/ltd-ec-401.jpg",
+    "id": "card3"
   },
   {
     "name": "LTD H-1001",
@@ -37,7 +40,8 @@
     "hand": "Right",
     "quantity": 1,
     "price": 1379.00,
-    "img": "./assets/img/ltd-h-1001.jpg"
+    "img": "./assets/img/ltd-h-1001.jpg",
+    "id": "card4"
   },
   {
     "name": "LTD EC-256FM",
@@ -47,7 +51,8 @@
     "hand": "Right",
     "quantity": 4,
     "price": 449.00,
-    "img": "./assets/img/ltd-ec-256fm.jpg"
+    "img": "./assets/img/ltd-ec-256fm.jpg",
+    "id": "card5"
   },
   {
     "name": "Squier FSR Jazzmaster",
@@ -57,7 +62,8 @@
     "hand": "Right",
     "quantity": 5,
     "price": 299.00,
-    "img": "./assets/img/squier-fsr.jpg"
+    "img": "./assets/img/squier-fsr.jpg",
+    "id": "card6"
   },
   {
     "name": "LTD EC-407",
@@ -67,7 +73,8 @@
     "hand": "Right",
     "quantity": 2,
     "price": 979.00,
-    "img": "./assets/img/ltd-ec-407.jpg"
+    "img": "./assets/img/ltd-ec-407.jpg",
+    "id": "card7"
   },
   {
     "name": "LTD MH-1007",
@@ -77,7 +84,8 @@
     "hand": "Right",
     "quantity": 1,
     "price": 1679.00,
-    "img": "./assets/img/ltd-mh-1007.jpg"
+    "img": "./assets/img/ltd-mh-1007.jpg",
+    "id": "card8"
   },
   {
     "name": "Squier Starcaster",
@@ -87,7 +95,8 @@
     "hand": "Right",
     "quantity": 3,
     "price": 299.00,
-    "img": "./assets/img/squier-affinity-starcaster-mn.jpg"
+    "img": "./assets/img/squier-affinity-starcaster-mn.jpg",
+    "id": "card9"
   },
   {
     "name": "Squier '70s Jazz Bass",
@@ -97,7 +106,8 @@
     "hand": "Right",
     "quantity": 2,
     "price": 414.00,
-    "img": "./assets/img/squier-classic-vibe-70s.jpg"
+    "img": "./assets/img/squier-classic-vibe-70s.jpg",
+    "id": "card10"
   },
   {
     "name": "Yamaha TRBX304",
@@ -107,7 +117,8 @@
     "hand": "Right",
     "quantity": 4,
     "price": 419.00,
-    "img": "./assets/img/yamaha-trbx304.jpg"
+    "img": "./assets/img/yamaha-trbx304.jpg",
+    "id": "card11"
   },
   {
     "name": "Yamaha TRBX604",
@@ -117,7 +128,8 @@
     "hand": "Right",
     "quantity": 1,
     "price": 699.00,
-    "img": "./assets/img/yamaha-trbx604.jpg"
+    "img": "./assets/img/yamaha-trbx604.jpg",
+    "id": "card12"
   },
   {
     "name": "LTD F-5E",
@@ -127,7 +139,8 @@
     "hand": "Right",
     "quantity": 2,
     "price": 749.00,
-    "img": "./assets/img/ltd-f-5e-mahogany.jpg"
+    "img": "./assets/img/ltd-f-5e-mahogany.jpg",
+    "id": "card13"
   },
   {
     "name": "Yamaha TRBX505",
@@ -137,7 +150,8 @@
     "hand": "Right",
     "quantity": 5,
     "price": 619.00,
-    "img": "./assets/img/yamaha-trbx505twh.jpg"
+    "img": "./assets/img/yamaha-trbx505twh.jpg",
+    "id": "card14"
   },
   {
     "name": "LTD AP-5",
@@ -147,7 +161,8 @@
     "hand": "Left",
     "quantity": 3,
     "price": 999.00,
-    "img": "./assets/img/ltd-ap-5-pb-lh.jpg"
+    "img": "./assets/img/ltd-ap-5-pb-lh.jpg",
+    "id": "card15"
   },
   {
     "name": "LTD B-205SM",
@@ -157,7 +172,8 @@
     "hand": "Left",
     "quantity": 3,
     "price": 629.00,
-    "img": "./assets/img/ltd-b-205sm-ns-lh.jpg"
+    "img": "./assets/img/ltd-b-205sm-ns-lh.jpg",
+    "id": "card16"
   },
   {
     "name": "Yamaha TRB1006J",
@@ -167,7 +183,8 @@
     "hand": "Right",
     "quantity": 1,
     "price": 1359.00,
-    "img": "./assets/img/yamaha-trb1006j.jpg"
+    "img": "./assets/img/yamaha-trb1006j.jpg",
+    "id": "card17"
   },
   {
     "name": "LTD B-206SM",
@@ -177,7 +194,8 @@
     "hand": "Right",
     "quantity": 4,
     "price": 699.00,
-    "img": "./assets/img/ltd-b-206sm-stblks.jpg"
+    "img": "./assets/img/ltd-b-206sm-stblks.jpg",
+    "id": "card18"
   },
   {
     "name": "LTD TL-6 AQMB",
@@ -187,7 +205,8 @@
     "hand": "Left",
     "quantity": 2,
     "price": 749.00,
-    "img": "./assets/img/ltd-tl-6-aqmb-lh.jpg"
+    "img": "./assets/img/ltd-tl-6-aqmb-lh.jpg",
+    "id": "card19"
   },
   {
     "name": "Yamaha FG820L",
@@ -197,7 +216,8 @@
     "hand": "Left",
     "quantity": 3,
     "price": 459.00,
-    "img": "./assets/img/yamaha-fg820l.jpg"
+    "img": "./assets/img/yamaha-fg820l.jpg",
+    "id": "card20"
   },
   {
     "name": "Yamaha CPX700II-12",
@@ -207,7 +227,8 @@
     "hand": "Right",
     "quantity": 1,
     "price": 849.00,
-    "img": "./assets/img/yamaha-cpx700-12nt.jpg"
+    "img": "./assets/img/yamaha-cpx700-12nt.jpg",
+    "id": "card21"
   },
   {
     "name": "Alvarez AD60-12CESHB",
@@ -217,7 +238,8 @@
     "hand": "Right",
     "quantity": 3,
     "price": 629.00,
-    "img": "./assets/img/alvarez-ad60-12ceshb.jpg"
+    "img": "./assets/img/alvarez-ad60-12ceshb.jpg",
+    "id": "card22"
   },
   {
     "name": "Alvarez AD60-12CEBK",
@@ -227,7 +249,8 @@
     "hand": "Right",
     "quantity": 4,
     "price": 649.00,
-    "img": "./assets/img/alvarez-ad60-12cebk.jpg"
+    "img": "./assets/img/alvarez-ad60-12cebk.jpg",
+    "id": "card23"
   },
   {
     "name": "Alvarez RS26",
@@ -237,7 +260,8 @@
     "hand": "Right",
     "quantity": 5,
     "price": 209.00,
-    "img": "./assets/img/alvarez-rs26.jpg"
+    "img": "./assets/img/alvarez-rs26.jpg",
+    "id": "card24"
   },
   {
     "name": "Alvarez ABT60CESHB",
@@ -247,7 +271,8 @@
     "hand": "Right",
     "quantity": 1,
     "price": 629.00,
-    "img": "./assets/img/alvarez-abt60.jpg"
+    "img": "./assets/img/alvarez-abt60.jpg",
+    "id": "card25"
   },
   {
     "name": "LaMancha CM/59",
@@ -257,7 +282,8 @@
     "hand": "Left",
     "quantity": 3,
     "price": 219.00,
-    "img": "./assets/img/la-mancha-rubi-cm59.jpg"
+    "img": "./assets/img/la-mancha-rubi-cm59.jpg",
+    "id": "card26"
   },
   {
     "name": "LaMancha LSM/63-N",
@@ -267,7 +293,8 @@
     "hand": "Left",
     "quantity": 4,
     "price": 149.00,
-    "img": "./assets/img/la-mancha-rubinito-lsm63.jpg"
+    "img": "./assets/img/la-mancha-rubinito-lsm63.jpg",
+    "id": "card27"
   },
   {
     "name": "Yamaha C40",
@@ -277,7 +304,8 @@
     "hand": "Right",
     "quantity": 5,
     "price": 149.00,
-    "img": "./assets/img/yamaha-c40.jpg"
+    "img": "./assets/img/yamaha-c40.jpg",
+    "id": "card28"
   },
   {
     "name": "LaMancha SMX/63",
@@ -287,7 +315,8 @@
     "hand": "Right",
     "quantity": 2,
     "price": 279.00,
-    "img": "./assets/img/la-mancha-rubi-smx63.jpg"
+    "img": "./assets/img/la-mancha-rubi-smx63.jpg",
+    "id": "card29"
   },
   {
     "name": "Yamaha CG142S",
@@ -297,6 +326,7 @@
     "hand": "Right",
     "quantity": 1,
     "price": 339.00,
-    "img": "./assets/img/yamaha-cg142s.jpg"
+    "img": "./assets/img/yamaha-cg142s.jpg",
+    "id": "card30"
   }
 ]

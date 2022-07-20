@@ -3,7 +3,7 @@ class Filters {
     const filtersContainer: HTMLElement | null = document.getElementById('filters-container');
 
     const filters = `
-      <select name="select" class="filters__sort">
+      <select name="select" class="filters__sort" id="filters-sort">
         <option value="all">Sort by:</option>
         <option value="name-az">Name A-Z</option>
         <option value="name-za">Name Z-A</option>
@@ -81,8 +81,8 @@ class Filters {
           <label for="left">For left-handed</label>
         </div>
       </div>
-      <button class="filters__button-reset">Reset filters</button>
-      <button class="filters__button-clear">Clear all</button>`;
+      <button class="filters__button-reset" id="button-reset">Reset filters</button>
+      <button class="filters__button-clear" id="button-clear">Clear all</button>`;
 
     filtersContainer ? (filtersContainer.innerHTML = filters) : new Error('Element not found');
   }

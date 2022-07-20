@@ -4,10 +4,11 @@ import ModalWindow from '../modal/modalWindow';
 class Card {
   create(data: Products[]): void {
     const cardsContainer: HTMLElement | null = document.getElementById('cards-container');
+    cardsContainer ? (cardsContainer.innerHTML = '') : new Error('Element not found');
 
     data.forEach((el): void => {
       const cardInner = `
-        <div class="card">
+        <div class="card" id="${el.id}">
           <img src="${el.img}" alt="guitar" class="card__img">
           <h3 class="card__title">${el.name}</h3>
           <ul class="card__list">
