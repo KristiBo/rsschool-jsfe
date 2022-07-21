@@ -14,13 +14,6 @@ class Filters {
     const filtersContainer: HTMLElement | null = document.getElementById('filters-container');
 
     const filters = `
-      <select name="select" class="filters__sort" id="filters-sort">
-        <option value="all">Sort by:</option>
-        <option value="name-az">Name A-Z</option>
-        <option value="name-za">Name Z-A</option>
-        <option value="price-up">Price Up</option>
-        <option value="price-down">Price Down</option>
-      </select>
       <p class="filter__name">Price:</p>
       <div id="slider-price"></div>
       <p class="filter__name">Quantity:</p>
@@ -95,7 +88,19 @@ class Filters {
       <button class="filters__button-reset" id="button-reset">Reset filters</button>
       <button class="filters__button-clear" id="button-clear">Clear all</button>`;
 
-    filtersContainer ? (filtersContainer.innerHTML = filters) : new Error('Element not found');
+    if (filtersContainer) filtersContainer.innerHTML = filters;
+  }
+
+  sortCreate(): void {
+    const sortInner = `<select name="select" class="filters__sort" id="filters-sort">
+    <option value="all">Sort by:</option>
+    <option value="name-az">Name A-Z</option>
+    <option value="name-za">Name Z-A</option>
+    <option value="price-up">Price Up</option>
+    <option value="price-down">Price Down</option>
+  </select>`;
+    const sortContainer: HTMLElement | null = document.getElementById('sort-container');
+    if (sortContainer) sortContainer.innerHTML = sortInner;
   }
 
   sliderCreate(): void {

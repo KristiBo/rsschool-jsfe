@@ -26,6 +26,8 @@ class App {
   create(): void {
     this.header.create();
 
+    this.filters.sortCreate();
+
     this.filters.create();
 
     this.card.create(products);

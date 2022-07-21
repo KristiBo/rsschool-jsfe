@@ -1,11 +1,16 @@
 .filters {
   @include flex-column;
-  flex-wrap: wrap;
   padding: 15px;
   gap: 20px;
   background-color: $color-white;
   border-radius: $border-radius;
   box-shadow: $shadow-cyan;
+
+  &__sort-container,
+  &__container {
+    @include flex-column;
+    gap: 20px;
+  }
 
   &__sort {
     max-width: 100%;
@@ -22,7 +27,7 @@
 
     &:hover {
       box-shadow: $shadow-cyan;
-    }
+    }    
   }
 
   &__brand {

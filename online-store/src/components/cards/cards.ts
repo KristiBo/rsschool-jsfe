@@ -6,7 +6,7 @@ class Card {
 
   create(data: Products[]): void {
     const cardsContainer: HTMLElement | null = document.getElementById('cards-container');
-    cardsContainer ? (cardsContainer.innerHTML = '') : new Error('Element not found');
+    if (cardsContainer) cardsContainer.innerHTML = '';
 
     data.forEach((el): void => {
       const cardInner = `
@@ -23,7 +23,7 @@ class Card {
           <button class="card__button">Add to cart</button>
         </div>`;
 
-      cardsContainer ? (cardsContainer.innerHTML += cardInner) : new Error('Element not found');
+      if (cardsContainer) cardsContainer.innerHTML += cardInner;
     });
 
     const cards = document.querySelectorAll('.card');
@@ -60,7 +60,7 @@ class Card {
           modal.close();
         }
 
-        cartQuantity ? (cartQuantity.innerHTML = `${count}`) : new Error('Element not found');
+        if (cartQuantity) cartQuantity.innerHTML = `${count}`;
         console.log(this.productsCart);
       });
     });

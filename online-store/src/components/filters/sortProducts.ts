@@ -3,7 +3,7 @@ import Card from '../cards/cards';
 import Products from '../../interfaces/products';
 import products from '../../products.json';
 
-export const filtersState: State = {
+const filtersState: State = {
   search: '',
   sort: 'all',
   price: [149, 1679],
@@ -87,7 +87,7 @@ class SortProducts {
     if (this.filteredProducts.length) {
       this.card.create(this.filteredProducts);
     } else {
-      cardsContainer ? (cardsContainer.innerHTML = `<h2>No matches were found</h2>`) : new Error('Element not found');
+      if (cardsContainer) cardsContainer.innerHTML = `<h2>No matches were found</h2>`;
     }
   }
 
