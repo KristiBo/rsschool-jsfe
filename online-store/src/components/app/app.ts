@@ -30,8 +30,6 @@ class App {
 
     this.card.create(products);
 
-    this.card.addToCart();
-
     this.footer.create();
 
     this.modal.create();

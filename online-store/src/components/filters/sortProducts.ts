@@ -89,8 +89,6 @@ class SortProducts {
     } else {
       cardsContainer ? (cardsContainer.innerHTML = `<h2>No matches were found</h2>`) : new Error('Element not found');
     }
-
-    this.card.addToCart();
   }
 
   sortGoods(): void {

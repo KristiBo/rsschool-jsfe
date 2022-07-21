@@ -25,6 +25,13 @@ class Card {
 
       cardsContainer ? (cardsContainer.innerHTML += cardInner) : new Error('Element not found');
     });
+
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card): void => {
+      if (this.productsCart.find((el) => el.id === card.id)) card.classList.add('active');
+    });
+
+    this.addToCart();
   }
 
   addToCart(): void {
@@ -35,8 +42,8 @@ class Card {
 
     cards.forEach((card): void => {
       card.addEventListener('click', () => {
-        if (this.productsCart.find((el) => el === card)) {
-          this.productsCart = this.productsCart.filter((el) => el !== card);
+        if (this.productsCart.find((el) => el.id === card.id)) {
+          this.productsCart = this.productsCart.filter((el) => el.id !== card.id);
           card.classList.remove('active');
           count = this.productsCart.length;
         } else {
@@ -47,13 +54,14 @@ class Card {
 
         if (count > 20) {
           modal.open();
-          this.productsCart = this.productsCart.filter((el) => el !== card);
+          this.productsCart = this.productsCart.filter((el) => el.id !== card.id);
           card.classList.remove('active');
           count = this.productsCart.length;
           modal.close();
         }
 
         cartQuantity ? (cartQuantity.innerHTML = `${count}`) : new Error('Element not found');
+        console.log(this.productsCart);
       });
     });
   }
