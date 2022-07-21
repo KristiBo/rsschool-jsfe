@@ -3,7 +3,7 @@ import Card from '../cards/cards';
 import Products from '../../interfaces/products';
 import products from '../../products.json';
 
-const filtersState: State = {
+export const filtersState: State = {
   search: '',
   sort: 'all',
   price: [149, 1679],
@@ -25,22 +25,6 @@ class SortProducts {
 
   filtersHandler(key: string, value: string | (number | string)[]): void {
     switch (key) {
-      case 'hand':
-        filtersState.hand = value as string;
-        break;
-
-      case 'brand':
-        filtersState.brand.includes(value as string)
-          ? (filtersState.brand = filtersState.brand.filter((item) => item !== value))
-          : filtersState.brand.push(value as string);
-        break;
-
-      case 'type':
-        filtersState.type.includes(value as string)
-          ? (filtersState.type = filtersState.type.filter((item) => item !== value))
-          : filtersState.type.push(value as string);
-        break;
-
       case 'search':
         filtersState.search = value as string;
         break;
@@ -57,10 +41,26 @@ class SortProducts {
         filtersState.quantity = value as number[];
         break;
 
+      case 'brand':
+        filtersState.brand.includes(value as string)
+          ? (filtersState.brand = filtersState.brand.filter((item) => item !== value))
+          : filtersState.brand.push(value as string);
+        break;
+
+      case 'type':
+        filtersState.type.includes(value as string)
+          ? (filtersState.type = filtersState.type.filter((item) => item !== value))
+          : filtersState.type.push(value as string);
+        break;
+
       case 'color':
         filtersState.color.includes(value as string)
           ? (filtersState.color = filtersState.color.filter((item) => item !== value))
           : filtersState.color.push(value as string);
+        break;
+
+      case 'hand':
+        filtersState.hand = value as string;
         break;
     }
 
@@ -100,19 +100,29 @@ class SortProducts {
 
     if (filtersState.sort === 'name-az') {
       this.filteredProducts.sort((a, b) => {
-        if (a.name > b.name) return 1;
-        if (a.name < b.name) return -1;
+        if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
+        if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
         return 0;
       });
     }
 
     if (filtersState.sort === 'name-za') {
       this.filteredProducts.sort((a, b) => {
-        if (a.name < b.name) return 1;
-        if (a.name > b.name) return -1;
+        if (a.name.toLowerCase() < b.name.toLowerCase()) return 1;
+        if (a.name.toLowerCase() > b.name.toLowerCase()) return -1;
         return 0;
       });
     }
+  }
+
+  resetState(): void {
+    filtersState.search = '';
+    filtersState.price = [149, 1679];
+    filtersState.quantity = [1, 5];
+    filtersState.brand = [];
+    filtersState.type = [];
+    filtersState.color = [];
+    filtersState.hand = 'Right';
   }
 }
 

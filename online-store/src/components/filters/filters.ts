@@ -1,5 +1,7 @@
 import SortProducts from './sortProducts';
 import noUiSlider from '../../../node_modules/nouislider/dist/nouislider';
+import products from '../../products.json';
+import Card from '../cards/cards';
 
 class Filters {
   sort: SortProducts;
@@ -156,7 +158,7 @@ class Filters {
   }
 
   addListeners(): void {
-    const searchInput: HTMLInputElement | null = document.getElementById('search-input') as HTMLInputElement;
+    const searchInput = document.getElementById('search-input') as HTMLInputElement;
     searchInput.addEventListener('input', () => {
       this.sort.filtersHandler('search', searchInput.value);
     });
@@ -235,6 +237,22 @@ class Filters {
     colorWood.addEventListener('click', () => {
       this.sort.filtersHandler('color', 'wood');
     });
+
+    const resetButton = document.getElementById('button-reset') as HTMLButtonElement;
+    resetButton.addEventListener('click', () => this.resetFilters());
+  }
+
+  resetFilters(): void {
+    const searchInput = document.getElementById('search-input') as HTMLInputElement;
+    searchInput.value = '';
+    this.sort.resetState();
+    this.sort.filteredProducts = [...products];
+    this.sort.sortGoods();
+    const card = new Card();
+    card.create(this.sort.filteredProducts);
+    this.create();
+    this.addListeners();
+    this.sliderCreate();
   }
 }
 
