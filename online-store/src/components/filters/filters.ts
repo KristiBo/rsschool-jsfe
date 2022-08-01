@@ -2,18 +2,14 @@ import SortProducts from './sortProducts';
 import noUiSlider from '../../../node_modules/nouislider/dist/nouislider';
 import products from '../../products.json';
 import Card from '../cards/cards';
+import BaseComponent from '../baseComponent/baseComponent';
 
-class Filters {
+class Filters extends BaseComponent {
   sort: SortProducts;
 
-  constructor() {
-    this.sort = new SortProducts();
-  }
+  container = document.getElementById('filters-container');
 
-  create(): void {
-    const filtersContainer: HTMLElement | null = document.getElementById('filters-container');
-
-    const filters = `
+  inner = `
       <p class="filter__name">Price:</p>
       <div id="slider-price"></div>
       <p class="filter__name">Quantity:</p>
@@ -88,19 +84,9 @@ class Filters {
       <button class="filters__button-reset" id="button-reset">Reset filters</button>
       <button class="filters__button-clear" id="button-clear">Clear all</button>`;
 
-    if (filtersContainer) filtersContainer.innerHTML = filters;
-  }
-
-  sortCreate(): void {
-    const sortInner = `<select name="select" class="filters__sort" id="filters-sort">
-    <option value="all">Sort by:</option>
-    <option value="name-az">Name A-Z</option>
-    <option value="name-za">Name Z-A</option>
-    <option value="price-up">Price Up</option>
-    <option value="price-down">Price Down</option>
-  </select>`;
-    const sortContainer: HTMLElement | null = document.getElementById('sort-container');
-    if (sortContainer) sortContainer.innerHTML = sortInner;
+  constructor() {
+    super();
+    this.sort = new SortProducts();
   }
 
   sliderCreate(): void {
@@ -130,8 +116,6 @@ class Filters {
         .on('update', (value): void => {
           this.sort.filtersHandler('price', value);
         });
-    } else {
-      new Error('Element not found');
     }
 
     if (sliderQuantity) {
@@ -157,8 +141,6 @@ class Filters {
         .on('update', (value): void => {
           this.sort.filtersHandler('quantity', value);
         });
-    } else {
-      new Error('Element not found');
     }
   }
 
@@ -175,7 +157,11 @@ class Filters {
 
     const filterHand = document.getElementById('left') as HTMLInputElement;
     filterHand.addEventListener('click', () => {
-      filterHand.checked ? this.sort.filtersHandler('hand', 'Left') : this.sort.filtersHandler('hand', 'Right');
+      if (filterHand.checked) {
+        this.sort.filtersHandler('hand', 'Left');
+      } else {
+        this.sort.filtersHandler('hand', 'Right');
+      }
     });
 
     const brandAlvarez = document.getElementById('alvarez') as HTMLInputElement;

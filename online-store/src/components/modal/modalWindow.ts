@@ -1,30 +1,38 @@
-class ModalWindow {
-  create(): void {
-    const modalInner = `
-      <div class="modal">
-        <div class="modal__overlay">
-          <div class="modal__window">
-            <div class="modal__content">
-              <span class="modal__text">Sorry, all slots are full</span>
-              <button class="modal__button">ok</button>
-            </div>
-          </div>
-        </div>
-      </div>`;
+import BaseComponent from '../baseComponent/baseComponent';
 
-    document.body.innerHTML += modalInner;
+class ModalWindow extends BaseComponent {
+  inner = `      
+    <div class="modal__overlay">
+      <div class="modal__window">
+        <div class="modal__content">
+          <span class="modal__text">Sorry, all slots are full</span>
+          <button class="modal__button">ok</button>
+        </div>
+      </div>
+    </div>`;
+
+  container = document.getElementById('modal');
+
+  modal: HTMLElement | null = document.querySelector('.modal');
+
+  button: HTMLElement | null = document.querySelector('.modal__button');
+
+  addListenerToButton(): void {
+    if (this.button) {
+      this.button.addEventListener('click', () => this.close());
+    }
   }
 
   open(): void {
-    const modal: HTMLElement | null = document.querySelector('.modal');
-    modal ? modal.classList.add('open') : new Error('Element not found');
+    if (this.modal) {
+      this.modal.classList.add('open');
+    }
   }
 
   close(): void {
-    const button: HTMLElement | null = document.querySelector('.modal__button');
-    const modal: HTMLElement | null = document.querySelector('.modal');
-    const closeModal = (): void | Error => (modal ? modal.classList.remove('open') : new Error('Element not found'));
-    button ? button.addEventListener('click', () => closeModal()) : new Error('Element not found');
+    if (this.modal) {
+      this.modal.classList.remove('open');
+    }
   }
 }
 

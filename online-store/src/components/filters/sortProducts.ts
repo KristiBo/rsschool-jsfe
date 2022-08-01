@@ -87,27 +87,41 @@ class SortProducts {
     if (this.filteredProducts.length) {
       this.card.create(this.filteredProducts);
     } else {
-      if (cardsContainer) cardsContainer.innerHTML = `<h2>No matches were found</h2>`;
+      if (cardsContainer) {
+        cardsContainer.innerHTML = `<h2>No matches were found</h2>`;
+      }
     }
   }
 
   sortGoods(): void {
-    if (filtersState.sort === 'price-up') this.filteredProducts.sort((a, b) => a.price - b.price);
+    if (filtersState.sort === 'price-up') {
+      this.filteredProducts.sort((a, b) => a.price - b.price);
+    }
 
-    if (filtersState.sort === 'price-down') this.filteredProducts.sort((a, b) => b.price - a.price);
+    if (filtersState.sort === 'price-down') {
+      this.filteredProducts.sort((a, b) => b.price - a.price);
+    }
 
     if (filtersState.sort === 'name-az') {
       this.filteredProducts.sort((a, b) => {
-        if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
-        if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+        if (a.name.toLowerCase() > b.name.toLowerCase()) {
+          return 1;
+        }
+        if (a.name.toLowerCase() < b.name.toLowerCase()) {
+          return -1;
+        }
         return 0;
       });
     }
 
     if (filtersState.sort === 'name-za') {
       this.filteredProducts.sort((a, b) => {
-        if (a.name.toLowerCase() < b.name.toLowerCase()) return 1;
-        if (a.name.toLowerCase() > b.name.toLowerCase()) return -1;
+        if (a.name.toLowerCase() < b.name.toLowerCase()) {
+          return 1;
+        }
+        if (a.name.toLowerCase() > b.name.toLowerCase()) {
+          return -1;
+        }
         return 0;
       });
     }
