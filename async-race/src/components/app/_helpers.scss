@@ -1,0 +1,29 @@
+$color-light-gray: #f0f0f0;
+$color-light-blue: #6fa3a1;
+$color-gray: #969494;
+$color-deep-cyan: #004445;
+
+$border-radius: 3px;
+$border-btn: 2px solid $color-deep-cyan;
+$border-filters: 1px solid $color-deep-cyan;
+$btn-l: 135px;
+$btn-m: 80px;
+$btn-s: 25px;
+
+$transition-time: 0.5s;
+
+@mixin font-basic {
+  font-family: "Sansita", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}

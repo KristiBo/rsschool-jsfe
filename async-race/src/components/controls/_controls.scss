@@ -1,0 +1,47 @@
+.garage {
+  @include flex-column;
+  gap: 30px;
+}
+
+.controls {
+  @include flex-column;
+  gap: 5px;
+
+  &__create-car,
+  &__update-car {
+    @include flex-center;
+    gap: 5px;
+  }
+
+  &__move-car {
+    display: inline-flex;
+    gap: 5px;
+  }
+}
+
+.input-name {
+  margin: 0;
+  padding: 0 5px;
+  width: 165px;
+  height: 30px;
+  outline: none;
+  @include font-basic;
+  border-radius: $border-radius;
+  border: $border-btn;
+  background-color: $color-light-gray;
+
+  &:focus {
+    box-shadow: 0px 0px 5px 3px $color-light-blue;
+  }
+}
+
+.create-button,
+.update-button,
+.race-button,
+.reset-button {
+  width: $btn-m;
+}
+
+.generate-button {
+  width: $btn-l;
+}
