@@ -9,18 +9,20 @@
   }
 
   &__container {
+    position: relative;
     @include flex-center;
     gap: 5px;
     border-bottom: 2px dashed;
-
-    :last-child {
-      justify-self: end;
-    }
   }
 
   &__select-button,
   &__remove-button {
     width: $btn-m;
+  }
+
+  &__name {
+    margin-left: 10px;
+    font-size: 20px;
   }
 
   &__start-button,
@@ -29,6 +31,9 @@
   }
 
   &__finish-img {
+    position: absolute;
     height: 35px;
+    right: 50px;
+    bottom: 0;
   }
 }
