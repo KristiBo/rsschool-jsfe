@@ -1,2 +1,2 @@
-# kristibo-JSFE2022Q1
-Private repository for @kristibo
+- :point_right: [**Shelter for Pets**](https://kristibo.github.io/rsschool-jsfe/shelter/pages/main/main.html)
+- :point_right: [**Online Store**](https://kristibo-online-store.netlify.app/)
