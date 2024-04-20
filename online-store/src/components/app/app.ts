@@ -42,8 +42,6 @@ class App {
     this.filters.sliderCreate();
 
     this.filters.addListeners();
-
-    this.sortProducts.filterGoods(products);
   }
 }
 

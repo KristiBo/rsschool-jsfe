@@ -11,7 +11,7 @@ class Header extends BaseComponent {
         </div>
         <div class="header__cart cart">
           <img src="./assets/icons/shopping-cart.svg" alt="shopping-cart" class="cart__icon">
-          <span class="cart__quantity">0</span>
+          <span class="cart__quantity">${localStorage.getItem('productsID')?.length}</span>
         </div>`;
 
   container = document.getElementById('header-container');

@@ -43,19 +43,25 @@ class SortProducts {
 
       case 'brand':
         filtersState.brand.includes(value as string)
-          ? (filtersState.brand = filtersState.brand.filter((item) => item !== value))
+          ? (filtersState.brand = filtersState.brand.filter(
+              (item) => item !== value
+            ))
           : filtersState.brand.push(value as string);
         break;
 
       case 'type':
         filtersState.type.includes(value as string)
-          ? (filtersState.type = filtersState.type.filter((item) => item !== value))
+          ? (filtersState.type = filtersState.type.filter(
+              (item) => item !== value
+            ))
           : filtersState.type.push(value as string);
         break;
 
       case 'color':
         filtersState.color.includes(value as string)
-          ? (filtersState.color = filtersState.color.filter((item) => item !== value))
+          ? (filtersState.color = filtersState.color.filter(
+              (item) => item !== value
+            ))
           : filtersState.color.push(value as string);
         break;
 
@@ -69,17 +75,43 @@ class SortProducts {
 
   filterGoods(products: Products[]): void {
     this.filteredProducts = [];
-    const cardsContainer: HTMLElement | null = document.getElementById('cards-container');
+    const cardsContainer: HTMLElement | null =
+      document.getElementById('cards-container');
 
     this.filteredProducts.push(
       ...products
-        .filter((item) => item.name.toLowerCase().includes(filtersState.search.toLowerCase()))
-        .filter((item) => item.price >= filtersState.price[0] && item.price <= filtersState.price[1])
-        .filter((item) => item.quantity >= filtersState.quantity[0] && item.quantity <= filtersState.quantity[1])
-        .filter((item) => filtersState.brand.includes(item.brand.toLowerCase()) || !filtersState.brand.length)
-        .filter((item) => filtersState.type.includes(item.type.toLowerCase()) || !filtersState.type.length)
-        .filter((item) => filtersState.color.includes(item.color.toLowerCase()) || !filtersState.color.length)
-        .filter((item) => item.hand === filtersState.hand || filtersState.hand === 'Right')
+        .filter((item) =>
+          item.name.toLowerCase().includes(filtersState.search.toLowerCase())
+        )
+        .filter(
+          (item) =>
+            item.price >= +filtersState.price[0] &&
+            item.price <= +filtersState.price[1]
+        )
+        .filter(
+          (item) =>
+            item.quantity >= +filtersState.quantity[0] &&
+            item.quantity <= +filtersState.quantity[1]
+        )
+        .filter(
+          (item) =>
+            filtersState.brand.includes(item.brand.toLowerCase()) ||
+            !filtersState.brand.length
+        )
+        .filter(
+          (item) =>
+            filtersState.type.includes(item.type.toLowerCase()) ||
+            !filtersState.type.length
+        )
+        .filter(
+          (item) =>
+            filtersState.color.includes(item.color.toLowerCase()) ||
+            !filtersState.color.length
+        )
+        .filter(
+          (item) =>
+            item.hand === filtersState.hand || filtersState.hand === 'Right'
+        )
     );
 
     this.sortGoods();

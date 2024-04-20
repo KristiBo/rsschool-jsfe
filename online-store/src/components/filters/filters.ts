@@ -82,7 +82,7 @@ class Filters extends BaseComponent {
         </div>
       </div>
       <button class="filters__button-reset" id="button-reset">Reset filters</button>
-      <button class="filters__button-clear" id="button-clear">Clear all</button>`;
+      <button class="filters__button-clear" id="button-clear">Clear the cart</button>`;
 
   constructor() {
     super();
@@ -90,8 +90,10 @@ class Filters extends BaseComponent {
   }
 
   sliderCreate(): void {
-    const sliderPrice: HTMLElement | null = document.getElementById('slider-price');
-    const sliderQuantity: HTMLElement | null = document.getElementById('slider-quantity');
+    const sliderPrice: HTMLElement | null =
+      document.getElementById('slider-price');
+    const sliderQuantity: HTMLElement | null =
+      document.getElementById('slider-quantity');
 
     if (sliderPrice) {
       noUiSlider
@@ -145,17 +147,24 @@ class Filters extends BaseComponent {
   }
 
   addListeners(): void {
-    const searchInput = document.getElementById('search-input') as HTMLInputElement;
+    const searchInput = document.getElementById(
+      'search-input'
+    ) as HTMLInputElement;
+
     searchInput.addEventListener('input', () => {
       this.sort.filtersHandler('search', searchInput.value);
     });
 
-    const filtersSort = document.getElementById('filters-sort') as HTMLSelectElement;
+    const filtersSort = document.getElementById(
+      'filters-sort'
+    ) as HTMLSelectElement;
+
     filtersSort.addEventListener('input', () => {
       this.sort.filtersHandler('sort', filtersSort.value);
     });
 
     const filterHand = document.getElementById('left') as HTMLInputElement;
+
     filterHand.addEventListener('click', () => {
       if (filterHand.checked) {
         this.sort.filtersHandler('hand', 'Left');
@@ -165,76 +174,107 @@ class Filters extends BaseComponent {
     });
 
     const brandAlvarez = document.getElementById('alvarez') as HTMLInputElement;
+
     brandAlvarez.addEventListener('click', () => {
       this.sort.filtersHandler('brand', 'alvarez');
     });
 
-    const brandLamancha = document.getElementById('lamancha') as HTMLInputElement;
+    const brandLamancha = document.getElementById(
+      'lamancha'
+    ) as HTMLInputElement;
+
     brandLamancha.addEventListener('click', () => {
       this.sort.filtersHandler('brand', 'lamancha');
     });
 
     const brandLtd = document.getElementById('ltd') as HTMLInputElement;
+
     brandLtd.addEventListener('click', () => {
       this.sort.filtersHandler('brand', 'ltd');
     });
 
     const brandSquier = document.getElementById('squier') as HTMLInputElement;
+
     brandSquier.addEventListener('click', () => {
       this.sort.filtersHandler('brand', 'squier');
     });
 
     const brandYamaha = document.getElementById('yamaha') as HTMLInputElement;
+
     brandYamaha.addEventListener('click', () => {
       this.sort.filtersHandler('brand', 'yamaha');
     });
 
     const typeBases = document.getElementById('basses') as HTMLInputElement;
+
     typeBases.addEventListener('click', () => {
       this.sort.filtersHandler('type', 'basses');
     });
 
-    const typeElectric = document.getElementById('electric') as HTMLInputElement;
+    const typeElectric = document.getElementById(
+      'electric'
+    ) as HTMLInputElement;
+
     typeElectric.addEventListener('click', () => {
       this.sort.filtersHandler('type', 'electric');
     });
 
-    const typeClassical = document.getElementById('classical') as HTMLInputElement;
+    const typeClassical = document.getElementById(
+      'classical'
+    ) as HTMLInputElement;
+
     typeClassical.addEventListener('click', () => {
       this.sort.filtersHandler('type', 'classical');
     });
 
     const typeWestern = document.getElementById('western') as HTMLInputElement;
+
     typeWestern.addEventListener('click', () => {
       this.sort.filtersHandler('type', 'western');
     });
 
     const colorBlack = document.getElementById('black') as HTMLInputElement;
+
     colorBlack.addEventListener('click', () => {
       this.sort.filtersHandler('color', 'black');
     });
 
     const colorBlue = document.getElementById('blue') as HTMLInputElement;
+
     colorBlue.addEventListener('click', () => {
       this.sort.filtersHandler('color', 'blue');
     });
 
     const colorWhite = document.getElementById('white') as HTMLInputElement;
+
     colorWhite.addEventListener('click', () => {
       this.sort.filtersHandler('color', 'white');
     });
 
     const colorWood = document.getElementById('wood') as HTMLInputElement;
+
     colorWood.addEventListener('click', () => {
       this.sort.filtersHandler('color', 'wood');
     });
 
-    const resetButton = document.getElementById('button-reset') as HTMLButtonElement;
+    const resetButton = document.getElementById(
+      'button-reset'
+    ) as HTMLButtonElement;
+
     resetButton.addEventListener('click', () => this.resetFilters());
+
+    const clearButton = document.getElementById(
+      'button-clear'
+    ) as HTMLButtonElement;
+
+    clearButton.addEventListener('click', () => this.clearTheBasket());
   }
 
   resetFilters(): void {
-    const searchInput = document.getElementById('search-input') as HTMLInputElement;
+    const searchInput = document.getElementById(
+      'search-input'
+    ) as HTMLInputElement;
+
     searchInput.value = '';
     this.sort.resetState();
     this.sort.filteredProducts = [...products];
@@ -244,6 +284,23 @@ class Filters extends BaseComponent {
     this.create();
     this.addListeners();
     this.sliderCreate();
+  }
+
+  clearTheBasket(): void {
+    const cards = document.querySelectorAll('.card');
+    const cartQuantity = document.querySelector('.cart__quantity');
+
+    if (cartQuantity) {
+      cartQuantity.innerHTML = '0';
+    }
+
+    if (cards) {
+      cards.forEach((card) => {
+        card.classList.remove('active');
+      });
+    }
+
+    localStorage.clear();
   }
 }
 
